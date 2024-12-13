@@ -87,6 +87,12 @@ To install `gum`
 
 For more installation methods , refer the [GitHub repository of `gum`](https://github.com/charmbracelet/gum)
 
+## Usage
+
+Check out this asciinema Recording to know thw baics of using `arduino-cli-interactive`
+
+[![asciicast](https://asciinema.org/a/fnYm1lYuWvlxelJPc1NA7uoBy.svg)](https://asciinema.org/a/fnYm1lYuWvlxelJPc1NA7uoBy)
+
  ## Stargazers over time
 [![Stargazers over time](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive.svg?variant=adaptive)](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive)
                     
