@@ -4,7 +4,8 @@ BOARD_NAME=""
 FQBN_SELECTED=""
 
 create_new_sketch() {
-  echo "New Sketch Created" $1
+  arduino-cli sketch new $1
+  echo "New Sketch Created"
   echo "At path ${PWD}" | gum style --foreground 47
   
   sleep 2
@@ -14,7 +15,7 @@ create_new_sketch() {
 
 upload_code() {
   echo "Select file to be uploaded" 
-  local file_chosen_u=$(gum file)
+  local file_chosen_u=$(gum file --height 5)
   echo "Uploaded Sketch" $file_chosen_u
   gum style --foreground 47 $file_chosen_u 
   
@@ -25,7 +26,7 @@ upload_code() {
 
 compile_code() {
   echo "Select file to be compiled"
-  local file_chosen_c=$(gum file ${PWD})
+  local file_chosen_c=$(gum file --height 5)
   echo "Compiled Sketch at path" 
   gum style --foreground 47 $file_chosen_c 
 
@@ -67,11 +68,12 @@ main() {
         with FQBN : $FQBN_SELECTED"
 
   sleep 1
-  local choice=$(gum filter --placeholder "Choose What you want to do" --limit 4 "Create New Sketch" "Compile Code" "Upload Code" "List Boards" "Exit")
+  local choice=$(gum choose "Create New Sketch" "Compile Code" "Upload Code" "List Boards" "Exit")
 
   case $choice in 
     "Create New Sketch")
-      create_new_sketch
+      local sketch_name=$(gum input --placeholder "Enter Name of Sketch")
+      create_new_sketch $sketch_name
       ;;
     "Compile Code")
       compile_code
