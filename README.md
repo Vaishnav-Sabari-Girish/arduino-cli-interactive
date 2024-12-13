@@ -87,7 +87,6 @@ To install `gum`
 
 For more installation methods , refer the [GitHub repository of `gum`](https://github.com/charmbracelet/gum)
 
-
-                        ## Stargazers over time
+ ## Stargazers over time
 [![Stargazers over time](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive.svg?variant=adaptive)](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive)
                     
