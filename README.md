@@ -1,13 +1,13 @@
 
 - [Arduino Interactive CLI](#arduino-interactive-cli)
     + [Pre-requisites](#pre-requisites)
-      - [1. `arduino-cli`](#1--arduino-cli-)
+      - [1. `arduino-cli`](#1. arduino-cli)
         * [Homebrew](#homebrew)
           + [macOS/Linux](#macos-linux)
           + [For windows users](#for-windows-users)
         * [Installing `arduino-cli` using the installation script](#installing--arduino-cli--using-the-installation-script)
         * [Using the Pre-built Binaries](#using-the-pre-built-binaries)
-      - [2. `gum`](#2--gum-)
+      - [2. `gum`](#2. gum)
 
 
 # Arduino Interactive CLI
