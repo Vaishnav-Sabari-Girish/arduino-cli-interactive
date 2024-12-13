@@ -1,3 +1,4 @@
+
 - [Arduino Interactive CLI](#arduino-interactive-cli)
     + [Pre-requisites](#pre-requisites)
       - [1. `arduino-cli`](#1--arduino-cli-)
@@ -55,7 +56,7 @@ You can also install the prebuilt binaries for Windows found [here](https://ardu
 
 #### 2. `gum`
 
-`gum` is a tool developed by the company charm.sh. 
+`gum` is a tool developed by the company [Charm](https://charm.sh/) . Check out their gitHub at (Charm's GitHub)[https://github.com/charmbracelet]
 
 It makes it easy to create good looking Terminal User Interface (TUI)
 
@@ -78,7 +79,7 @@ To install `gum`
     # Flox
     flox install gum
 
-    # Windows (via WinGet or Scoop)
+    # Windows (via WinGet or Scoop)  (Use Linux, or WSL)
     winget install charmbracelet.gum
     scoop install charm-gum
     ```
@@ -87,3 +88,6 @@ To install `gum`
 For more installation methods , refer the [GitHub repository of `gum`](https://github.com/charmbracelet/gum)
 
 
+                        ## Stargazers over time
+[![Stargazers over time](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive.svg?variant=adaptive)](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive)
+                    
