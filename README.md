@@ -99,10 +99,7 @@ Check out this asciinema Recording to know thw baics of using `arduino-cli-inter
 
 Incase asciinma doesn't work , see this
 
-<img src="https://vhs.charm.sh/vhs-34X797m1dKLYQfBEOTr4xh.gif" alt="Made with VHS">
-  <a href="https://vhs.charm.sh">
-    <img src="https://stuff.charm.sh/vhs/badge.svg">
-  </a>
+![Made with VHS](https://vhs.charm.sh/vhs-34X797m1dKLYQfBEOTr4xh.gif)
 
 
  ## Stargazers over time
