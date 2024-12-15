@@ -3,6 +3,7 @@
 BOARD_NAME=""
 FQBN_SELECTED=""
 
+
 create_new_sketch() {
   arduino-cli sketch new $1
   echo "New Sketch Created"
