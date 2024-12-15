@@ -101,7 +101,3 @@ Incase asciinma doesn't work , see this
 
 ![Made with VHS](https://vhs.charm.sh/vhs-34X797m1dKLYQfBEOTr4xh.gif)
 
-
- ## Stargazers over time
-[![Stargazers over time](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive.svg?variant=adaptive)](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive)
-                    
