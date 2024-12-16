@@ -56,7 +56,7 @@ upload_code() {
 compile_code() {
   echo "Select file to be compiled"
   #local file_c=$(gum file --height 5)
-  arduino-cli compile --fqbn $FQBN_SELECTED $sketch_file -v
+  gum spin --spinner moon --title "Compiling for $BOARD_NAME" -- arduino-cli compile --fqbn $FQBN_SELECTED $sketch_file -v
   echo "Compiled Sketch at path" 
   gum style --foreground 47 $sketch_file 
 
