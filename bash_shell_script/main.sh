@@ -24,10 +24,11 @@ edit_sketch() {
   done
   
   chosen_editor=$(printf "%s\n" "${installed_editors[@]}" | gum choose)
+  sleep 0.5
 
   $chosen_editor $sketch_file
-
-  main
+  
+  gum confirm "Check file contents" && gum pager < $sketch_file || main
 
 }
 
