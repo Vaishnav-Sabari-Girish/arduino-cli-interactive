@@ -95,11 +95,12 @@ For more installation methods , refer the [GitHub repository of `gum`](https://g
 
 Check out this asciinema Recording to know thw baics of using `arduino-cli-interactive`
 
-[![asciicast](https://asciinema.org/a/fnYm1lYuWvlxelJPc1NA7uoBy.svg)](https://asciinema.org/a/fnYm1lYuWvlxelJPc1NA7uoBy)
+[![asciicast](https://asciinema.org/a/MrsJQejlak5mpzRrQuydKXH1W.svg)](https://asciinema.org/a/MrsJQejlak5mpzRrQuydKXH1W)
 
 Incase asciinma doesn't work , see this
 
-![Made with VHS](https://vhs.charm.sh/vhs-34X797m1dKLYQfBEOTr4xh.gif)
+![Made with VHS](https://vhs.charm.sh/vhs-5e3yO2e4MhtHZsbfJk6fPt.gif)
+
 
 ## Stargazers over time
 [![Stargazers over time](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive.svg?variant=adaptive)](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive)
