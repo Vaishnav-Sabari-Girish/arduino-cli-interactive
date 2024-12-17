@@ -43,8 +43,23 @@ create_new_sketch() {
 }
 
 upload_code() {
-  echo "Select file to be uploaded" 
   #local file_u=$(gum file --height 5)
+  echo "Select Serial port to which the board is connected"
+  local serial_port=$(arduino-cli board list | awk '/\/dev\/tty/ {print $1}' | gum choose)
+  echo "Is your bootloader old (mostly for Nano) or the latest one"
+  local booltoader_old_new=$(gum choose "Old Bootloader" "New Bootloader")
+  
+  case $booltoader_old_new in 
+    "New Bootloader")
+      arduino-cli upload --fqbn $FQBN_SELECTED -p $serial_port $sketch_file
+      ;;
+    "Old Bootloader")
+      arduino-cli upload --fqbn "${FQBN_SELECTED}:cpu=atmega328old" -p $serial_port $sketch_file
+      ;;
+    *)
+      echo "Invalid Option"
+      ;;
+  esac
   echo "Uploaded Sketch" $sketch_file
   gum style --foreground 47 $sketch_file
   
