@@ -3,7 +3,7 @@
 BOARD_NAME=""
 FQBN_SELECTED=""
 
-editors=("nano" "micro" "vim" "nvim" "hx" "code" "codium")
+editors=("nano" "micro" "gedit" "vim" "nvim" "hx" "code" "codium")
 installed_editors=()
 
 sketch_file=""

@@ -3,17 +3,6 @@
 ![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
 
 
-- [Arduino Interactive CLI](#arduino-interactive-cli)
-    + [Pre-requisites](#pre-requisites)
-      - [1. `arduino-cli`](#1--arduino-cli--)
-        * [Homebrew](#homebrew)
-          + [macOS/Linux](#macos-linux)
-          + [For windows users](#for-windows-users)
-        * [Installing `arduino-cli` using the installation script](#installing--arduino-cli--using-the-installation-script)
-        * [Using the Pre-built Binaries](#using-the-pre-built-binaries)
-      - [2. `gum`](#2--gum--)
-
-
 # Arduino Interactive CLI
 
 This tool is made specifically for those who want to transition from the Arduino IDE to the CLI , but are still scared or intimidated by the command line. 
@@ -28,11 +17,11 @@ There are many ways to install arduino-cli. I recommend Homebrew , because all t
 
 In case you do not have Homebrew installed in your system 
 
-###### macOS/Linux
+##### macOS/Linux
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-###### For windows users
+##### For windows users
 
 Use Windows Subsystem for Linux (WSL) and follow the instructions for Linux.
 
@@ -52,7 +41,7 @@ If you do not want to use homebrew , you can copy and paste this installation sc
 
 `curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh`
 
-**NOTE** : This script in only for Linux/macOS/WSl users. 
+**NOTE** : This script in only for Linux/macOS/WSL users. 
 
 ##### Using the Pre-built Binaries
 
@@ -67,7 +56,7 @@ It makes it easy to create good looking Terminal User Interface (TUI)
 To install `gum` 
 
 <details>
-  <summary><h5>Using Package Managers</h5></summary>
+  <summary>Using Package Managers</summary>
     
     ```bash 
 
@@ -83,7 +72,8 @@ To install `gum`
     # Flox
     flox install gum
 
-    # Windows (via WinGet or Scoop)  (Use Linux, or WSL)
+    # Windows (via WinGet or Scoop)  (Use Linux, or WSL instead of 
+                                      directly installing in Windows)
     winget install charmbracelet.gum
     scoop install charm-gum
     ```
@@ -93,13 +83,13 @@ For more installation methods , refer the [GitHub repository of `gum`](https://g
 
 ## Usage
 
-Check out this asciinema Recording to know thw baics of using `arduino-cli-interactive`
+Check out this asciinema Recording to know the basics of using `arduino-cli-interactive`
 
-[![asciicast](https://asciinema.org/a/MrsJQejlak5mpzRrQuydKXH1W.svg)](https://asciinema.org/a/MrsJQejlak5mpzRrQuydKXH1W)
+[![asciinema Recording](https://asciinema.org/a/MrsJQejlak5mpzRrQuydKXH1W.svg)](https://asciinema.org/a/MrsJQejlak5mpzRrQuydKXH1W)
 
-Incase asciinma doesn't work , see this
+Incase asciinema doesn't work , see this
 
-![Made with VHS](https://vhs.charm.sh/vhs-5e3yO2e4MhtHZsbfJk6fPt.gif)
+![VHS Recording](https://vhs.charm.sh/vhs-5e3yO2e4MhtHZsbfJk6fPt.gif)
 
 
 ## Stargazers over time
