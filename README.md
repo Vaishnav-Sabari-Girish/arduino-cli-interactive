@@ -46,6 +46,8 @@ If you do not want to use homebrew , you can copy and paste this installation sc
 
 You can also install the prebuilt binaries for Windows found [here](https://arduino.github.io/arduino-cli/1.1/installation/#latest-release)
 
+Check out the `arduino-cli` documentation [here](https://arduino.github.io/arduino-cli/1.1/getting-started/)
+
 #### 2. `gum`
 
 `gum` is a tool developed by the company [Charm](https://charm.sh/) . Check out their gitHub at [Charm's GitHub](https://github.com/charmbracelet)
@@ -84,12 +86,11 @@ For more installation methods , refer the [GitHub repository of `gum`](https://g
 
 Check out this asciinema Recording to know the basics of using `arduino-cli-interactive`
 
-[![asciicast](https://asciinema.org/a/tJaeANrjr2whzvWktBYF5Ou51.svg)](https://asciinema.org/a/tJaeANrjr2whzvWktBYF5Ou51)
+[![asciicast](https://asciinema.org/a/SUQLo5g4TV0UL2v9YyBdpWuC3.svg)](https://asciinema.org/a/SUQLo5g4TV0UL2v9YyBdpWuC3)
 
 Incase asciinema doesn't work , see this
 
-![VHS Recording](https://vhs.charm.sh/vhs-3RMpP9U0cqZqzwhrlmz6Iq.gif)
-
+![VHS Recording](https://vhs.charm.sh/vhs-24NZrbEcj9OX2lbQKOJyua.gif)
 
 ## Stargazers over time
 [![Stargazers over time](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive.svg?variant=adaptive)](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive)

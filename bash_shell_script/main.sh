@@ -9,6 +9,10 @@ installed_editors=()
 sketch_file=""
 
 edit_config_file() {
+  if [ -e $HOME/.arduino15/arduino-cli.yaml ]; then
+    arduino-cli config init 
+  fi
+
   installed_editors=()
 
   echo "Choose your preferred editor."
