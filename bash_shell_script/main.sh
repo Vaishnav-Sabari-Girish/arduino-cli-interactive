@@ -31,6 +31,7 @@ edit_config_file() {
 
 }
 
+
 edit_sketch() {
   installed_editors=()
 
