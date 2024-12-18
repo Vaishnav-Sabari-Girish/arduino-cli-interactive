@@ -9,6 +9,8 @@ installed_editors=()
 sketch_file=""
 
 edit_sketch() {
+  installed_editors=()
+
   echo "Choose file to edit : "
   sketch_file=$(gum file --height 6)
   sleep 0.5
@@ -63,7 +65,7 @@ upload_code() {
   echo "Uploaded Sketch" $sketch_file
   gum style --foreground 47 $sketch_file
   
-  sleep 2
+  sleep 4
   clear
   main
 }
