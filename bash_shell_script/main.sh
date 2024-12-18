@@ -8,6 +8,29 @@ installed_editors=()
 
 sketch_file=""
 
+edit_config_file() {
+  installed_editors=()
+
+  echo "Choose your preferred editor."
+  echo "Note that these editors are already installed in your system"
+
+  sleep 1
+
+  for editor in "${editors[@]}"; do
+    if command -v $editor &> /dev/null; then
+      installed_editors+=("$editor")
+    fi
+  done
+  
+  chosen_editor=$(printf "%s\n" "${installed_editors[@]}" | gum choose)
+  sleep 0.5
+
+  $chosen_editor $HOME/.arduino15/arduino-cli.yaml
+
+ gum confirm "Check file contents" && gum pager <  $HOME/.arduino15/arduino-cli.yaml || main
+
+}
+
 edit_sketch() {
   installed_editors=()
 
@@ -114,7 +137,7 @@ main() {
         Sketch file :  $sketch_file"
 
   sleep 1
-  local choice=$(gum choose "Create New Sketch" "Edit the Sketch" "Compile Code" "Upload Code" "Select Board" "Exit")
+  local choice=$(gum choose "Select Board" "Create New Sketch" "Edit the Sketch" "Compile Code" "Upload Code" "Edit Configurations" "Exit")
 
   case $choice in 
     "Create New Sketch")
@@ -124,7 +147,10 @@ main() {
     "Edit the Sketch")
       edit_sketch
       ;;
-      
+
+    "Edit Configurations")
+      edit_config_file
+      ;;      
     "Compile Code")
       compile_code
       ;;
