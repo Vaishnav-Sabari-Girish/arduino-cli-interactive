@@ -9,7 +9,7 @@ This tool is made specifically for those who want to transition from the Arduino
 ## Installation
 
 ```bash
-git clone https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
+git clone https://github.com/Vaishnav-Sabari-Girish/arduino-cli-intaeractive.git
 cd bash_shell_script
 chmod +x main.sh 
 ./main.sh 
