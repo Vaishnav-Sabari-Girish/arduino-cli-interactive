@@ -33,7 +33,7 @@ In case you do not have Homebrew installed in your system
 
 Use Windows Subsystem for Linux (WSL) and follow the instructions for Linux.
 
-To learn to use WSL , the best video is by [NetwokChuck](https://youtu.be/vxTW22y8zV8?si=mZ5w9KmT0A4_d7Zr)
+To learn to use WSL , the best video is by [NetworkChuck](https://youtu.be/vxTW22y8zV8?si=mZ5w9KmT0A4_d7Zr)
 
 <br>
 
@@ -49,7 +49,7 @@ If you do not want to use homebrew , you can copy and paste this installation sc
 
 `curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh`
 
-**NOTE** : This script in only for Linux/macOS/WSL users. 
+**NOTE** : This script is only for Linux/macOS/WSL users. 
 
 ##### Using the Pre-built Binaries
 
