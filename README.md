@@ -6,6 +6,15 @@
 
 This tool is made specifically for those who want to transition from the Arduino IDE to the CLI , but are still scared or intimidated by the command line. 
 
+## Installation
+
+```bash
+git clone https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
+cd bash_shell_script
+chmod +x main.sh 
+./main.sh 
+```
+
 ### Pre-requisites
 
 #### 1. `arduino-cli` 
