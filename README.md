@@ -8,6 +8,15 @@ This tool is made specifically for those who want to transition from the Arduino
 
 ## Installation
 
+#### Via Homebrew 
+
+```bash
+brew tap vaishnav-sabari-girish/arduino-cli-interactive
+brew install aci
+```
+
+#### From source 
+
 ```bash
 git clone https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
 cd bash_shell_script
