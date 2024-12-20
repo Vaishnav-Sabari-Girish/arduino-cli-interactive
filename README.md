@@ -102,6 +102,15 @@ For more installation methods , refer the [GitHub repository of `gum`](https://g
 
 ## Usage
 
+Before stating to use `aci` , we need to install the cores required for the basic Arduino boards.
+
+So , go to your terminal and the below commands 
+
+```bash
+arduino-cli board listall
+arduino-cli core install arduino:avr
+```
+
 Check out this asciinema Recording to know the basics of using `arduino-cli-interactive`
 
 [![asciicast](https://asciinema.org/a/SUQLo5g4TV0UL2v9YyBdpWuC3.svg)](https://asciinema.org/a/SUQLo5g4TV0UL2v9YyBdpWuC3)
@@ -110,5 +119,3 @@ Incase asciinema doesn't work , see this
 
 ![VHS Recording](https://vhs.charm.sh/vhs-24NZrbEcj9OX2lbQKOJyua.gif)
 
-## Stargazers over time
-[![Stargazers over time](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive.svg?variant=adaptive)](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive)
