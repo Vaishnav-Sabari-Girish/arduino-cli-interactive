@@ -132,6 +132,25 @@ confirm_board_selection() {
   gum confirm "Current Selected Board : $BOARD_NAME" && main || list_installed_boards
 }
 
+install_libraries() {
+  local lib_name=$(gum input --placeholder "Enter Library Name to install")
+  local lib_chosen=$(arduino-cli lib search $lib_name | awk '
+  /Name/ {name=$2}
+  /Author/ {
+      author="";
+      for(i=2; i<=NF; i++){
+        if($i ~ /</) 
+          break;
+        author=author " " $i;
+      }
+      print name,  " : ", author; 
+    }
+  ' | gum choose)
+
+  local lib_to_install=$(echo "$lib_chosen" | awk -F' : ' '{print $1}' | tr -d '"')
+  arduino-cli lib install $lib_to_install
+}
+
 main() {
   clear
 
@@ -142,7 +161,7 @@ main() {
         Sketch file :  $sketch_file"
 
   sleep 1
-  local choice=$(gum choose "Select Board" "Create New Sketch" "Edit the Sketch" "Compile Code" "Upload Code" "Edit Configurations" "Exit")
+  local choice=$(gum choose "Select Board" "Create New Sketch" "Edit the Sketch" "Compile Code" "Upload Code" "Install Libraries" "Edit Configurations" "Exit")
 
   case $choice in 
     "Create New Sketch")
@@ -161,6 +180,9 @@ main() {
       ;;
     "Upload Code")
       upload_code
+      ;;
+    "Install Libraries")
+      install_libraries
       ;;
     "Select Board")
       list_installed_boards
