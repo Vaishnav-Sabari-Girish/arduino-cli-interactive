@@ -149,6 +149,7 @@ install_libraries() {
 
   local lib_to_install=$(echo "$lib_chosen" | awk -F' : ' '{print $1}' | tr -d '"')
   arduino-cli lib install $lib_to_install
+  main 
 }
 
 main() {
