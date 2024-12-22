@@ -1,3 +1,4 @@
 *.db
 *.txt
 *.tar.gz
+arduino-cli-interactive/

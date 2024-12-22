@@ -111,6 +111,13 @@ arduino-cli board listall
 arduino-cli core install arduino:avr
 ```
 
+To Uninstall 
+
+```bash
+brew uninstall aci 
+brew untap vaishnav-sabari-girish/arduino-cli-interactive
+```
+
 Check out this asciinema Recording to know the basics of using `arduino-cli-interactive`
 
 [![asciicast](https://asciinema.org/a/SUQLo5g4TV0UL2v9YyBdpWuC3.svg)](https://asciinema.org/a/SUQLo5g4TV0UL2v9YyBdpWuC3)
