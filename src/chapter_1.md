@@ -83,7 +83,7 @@ of linux.
 
 Some options are :
 
-1. <a id="micro>Micro</a>
+1. <a id="micro">Micro</a>
 
 
 ```bash
