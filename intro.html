@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction - Arduino CLI Interactive (aci)</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Arduino CLI Interactive (aci)</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><strong>NOTE</strong> : This page is only for those who are just starting out with Arduino programming.
+If you already have an idea on Arduino , you can skip this page and go to <a href="./chapter_1.html">Chapter 1</a>
+<br><br></p>
+<h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<h2 id="what-is-arduino-"><a class="header" href="#what-is-arduino-">What is Arduino ?</a></h2>
+<p>Arduino is an open-source microcontroller platform designed for building and programming electronic
+projects with ease and flexibility.</p>
+<h3 id="what-is-arduino-used-for-"><a class="header" href="#what-is-arduino-used-for-">What is Arduino used for ?</a></h3>
+<ul>
+<li>
+<p><strong>Robotics Projects</strong>: Build and control robots, including autonomous vehicles and robotic arms.</p>
+</li>
+<li>
+<p><strong>Home Automation</strong>: Automate lights, temperature, and security systems for smart home setups.</p>
+</li>
+<li>
+<p><strong>IoT Applications</strong>: Create Internet-connected devices for data monitoring and control.</p>
+</li>
+<li>
+<p><strong>Prototyping Electronics</strong>: Test and develop innovative electronic circuits and gadgets.</p>
+</li>
+<li>
+<p><strong>Educational Tools</strong>: Learn programming, electronics, and engineering concepts interactively.</p>
+</li>
+</ul>
+<p>Arduino boards come in many flavors , som eof the most famous ones being :</p>
+<ol>
+<li>Arduino Uno</li>
+<li>Arduino Nano</li>
+<li>Arduino Mega</li>
+</ol>
+<p>All Arduino boards are programmed using the <a href="https://www.arduino.cc/en/software">Arduino IDE</a>.</p>
+<h3 id="the-arduino-ide-integrated-development-environment"><a class="header" href="#the-arduino-ide-integrated-development-environment">The Arduino IDE (Integrated Development Environment)</a></h3>
+<p>The Arduino IDE is the software that is used to program the Arduino Boards. It has a pretty easy-to-use
+interface that can make it easier for beginners to learn how to use Arduino using the Arduino IDE.</p>
+<p>Check out the official Arduino <a href="https://arduino.cc">website</a> for more information on the IDE.</p>
+<h3 id="the-arduino-cli-command-line-interface"><a class="header" href="#the-arduino-cli-command-line-interface">The Arduino CLI (Command-Line Interface)</a></h3>
+<p>Now , installing the Arduino IDE in Windows is as easy as going to their website clicking on
+Download and done .</p>
+<p>But in the case of macOS (older distributions) and linux (especially) , the IDE requires a huge
+amount of permissions to be able to access the Serial Ports (The USB port in which the
+Arduino Board is connected).</p>
+<p>To avoid this , we do not have to install the Arduino IDE , instead , we can use the command line version
+of the IDE known as <code>arduino-cli</code>.</p>
+<p>This tool uses the Command Line Interface (CLI) instead of the traditional Graphical User Interfaces (GUI) of the
+Arduino IDE.</p>
+<p>This makes it easy for devs who want to use Arduino through linux.</p>
+<p>But , there is one teensy little problem.</p>
+<p>Here is an example of a command to upload the Arduino Sketch title "MySketch" to an Arduino Uno board.</p>
+<pre><code class="language-bash">arduino-cli upload -p /dev/ttyUSB0 --fqbn arduino:avr:uno MySketch/MySketch.ino
+</code></pre>
+<p>Here <code>-p</code> represents the serial port and the <code>--fqbn</code> flag represents the "Fully Qualified Board Name" ,
+which is used to denote the boards.</p>
+<p>Now , remembering the FQBN of 2 or 3 boards is pretty easy , but in case you are working with multiple
+boards of different types , say you are working with Arduino Uno , Arduino Nano , or ESP32.
+Remembering the FQBN of each and every board become increasingly difficult.</p>
+<p>To combat this problem , the project <code>arduino-cli-interactive</code> or <code>aci</code> was born.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next prefetch" href="chapter_1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next prefetch" href="chapter_1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
