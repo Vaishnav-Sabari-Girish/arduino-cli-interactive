@@ -1,0 +1,5 @@
+*.toml
+*.txt
+*.db
+src/
+
