@@ -157,7 +157,8 @@
 <ol>
 <li><a href="#compile-code">Compile Code for a specific board</a></li>
 <li><a href="#upload-code">Upload Code to the board</a></li>
-<li><a href="#edit-configuration">Add 3rd party cores and install them using <code>arduino-cli</code></a></li>
+<li><a href="#install-libraries">Install Libraries</a>
+<br><br></li>
 </ol>
 <h2 id="compile-code"><a class="header" href="#compile-code">Compile Code</a></h2>
 <p>To compile the code in the Sketch you created <a href="./chapter_2.html#edit-a-sketch">previously</a> , we open the
@@ -167,6 +168,36 @@ and make sure that <code>aci</code> is running and you must have <a href="./chap
 <p>Since you have already selected the board , it will compile the code for that specific board.</p>
 <p>In the following example we will compile the code for an Arduino Nano.</p>
 <p><img src="images/recordings/compile_code.gif" alt="compile code gif" /></p>
+<p><br><br></p>
+<h2 id="upload-code"><a class="header" href="#upload-code">Upload Code</a></h2>
+<p>To upload the code , you need to first <a href="#compile-code">Compile the code</a> and then back in the homepage ,
+navigate to the <strong>Upload Code</strong> option and press <strong>Enter</strong></p>
+<p>Once you are inside the <strong>Upload Code</strong> , you will be asked to choose the Serial Port your board
+is connected to.</p>
+<p>In Linux/macOS , the Serial port will show up as <code>/dev/ttyUSB0</code> and for windows , it will show up as
+<code>COM7</code> or any other number other than 7.</p>
+<p>After selecting the Serial Port , you will then be asked to choose between OLD and NEW Bootloaders.
+OLD Bootloaders as usually only for Arduino Nanos , so make sure you do not mess up that one.
+Choose between OLD and NEW Bootloaders and the the code will be uploaded.</p>
+<p>In the below recordings , one will be for Arduino Nano (Old Bootloader) and one for the WeMOS D1 R1
+(New Bootloader).</p>
+<h3 id="old-bootloader"><a class="header" href="#old-bootloader">Old Bootloader.</a></h3>
+<p><img src="images/recordings/upload_code_old.gif" alt="Old Bootloader" /></p>
+<h3 id="new-bootloader"><a class="header" href="#new-bootloader">New Bootloader</a></h3>
+<p><img src="images/recordings/upload_code_new.gif" alt="New Bootloader" /></p>
+<p><br><br></p>
+<h2 id="install-libraries"><a class="header" href="#install-libraries">Install Libraries</a></h2>
+<p>To install libraries , there is no need to Select a board or Create a New Sketch.</p>
+<p>Open a new terminal and type <code>aci</code>.
+The Navigate to the <strong>Install Libraries</strong> option using the Arrow Keys and click <strong>Enter</strong></p>
+<p>Now an input dialog box will appear prompting for the name of the library.
+Enter the name of the library and press <strong>Enter</strong></p>
+<p>When do you do , there will be a list of libraries that have the name you entered.
+Select the one you want to install and click <strong>Enter</strong></p>
+<p>Let us install the <strong>DHT11</strong> Library by <strong>Dhrubha Saha</strong>.</p>
+<p>To check if the library has been installed , type <code>arduino-cli lib list</code> and check the table
+for the library you just installed. If it is present then the library has been installed successfully.</p>
+<p><img src="images/recordings/lib_install.gif" alt="Lib Install" /></p>
 
                     </main>
 
