@@ -1,4 +1,4 @@
-const int ledPin = 13;    //Depends on the board , for Uno and Nano it is pin 13
+const int ledPin = 2;    //Depends on the board , for Uno and Nano it is pin 13
 
 void setup() {
   //This function will run only once when the board boots up 
