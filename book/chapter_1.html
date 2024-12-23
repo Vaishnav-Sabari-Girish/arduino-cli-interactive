@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Chapter 2 - Arduino CLI Interactive (aci)</title>
+        <title>Chapter 1 - Arduino CLI Interactive (aci)</title>
 
 
         <!-- Custom HTML head -->
@@ -152,124 +152,158 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="chapter-2-how-to-use-aci-part---1"><a class="header" href="#chapter-2-how-to-use-aci-part---1">Chapter 2 (How to use <code>aci</code> PART - 1)</a></h1>
-<p>By the end of this chapter , you will be able to do the following :</p>
+                        <h1 id="chapter-1--installation-of-tools"><a class="header" href="#chapter-1--installation-of-tools">Chapter 1  (Installation of Tools)</a></h1>
+<h2 id="installation-of-arduino-cli-interactive-or-aci"><a class="header" href="#installation-of-arduino-cli-interactive-or-aci">Installation of <code>arduino-cli-interactive</code> or <code>aci</code></a></h2>
+<p>For now there are 2 ways to install the <code>aci</code> tool.</p>
 <ol>
-<li><a href="#select-a-board">Select a Board to use</a></li>
-<li><a href="#create-a-new-sketch">Create a New sketch using <code>aci</code></a></li>
-<li><a href="#edit-a-sketch">Edit the created sketch</a>
-<br><br></li>
+<li>Download from source</li>
 </ol>
-<h2 id="select-a-board"><a class="header" href="#select-a-board">Select a Board</a></h2>
-<p>Open your terminal and type <code>aci</code>.
-You will be greeted with this page</p>
-<p><img src="images/homepage.png" alt="Homepage" /></p>
-<p><br><br></p>
-<p>Press <code>Enter</code> to enter the Board Selection Menu :</p>
-<p><img src="images/board_selection.png" alt="Board Selection" /></p>
-<p><br><br></p>
-<p>Type the Board Name you want to use and press <code>Enter</code>.</p>
-<p>Then a confirmation dialog box will open asking you to confirm the board you chose.</p>
-<p>Check the following GIF to see it in action.</p>
-<p>For example , let's use an Arduino Nano that is connected to my system ,</p>
-<p><img src="images/recordings/board_selection.gif" alt="board_selection_gif" /></p>
-<p><br><br></p>
-<p>Once you have selected a board, you can see the Board name and FQBN (Full Qualified Board Name) just
-below the "Welcome to arduino-cli-interactive" sign like so</p>
-<p><img src="images/board_name.png" alt="board name" /></p>
-<p><br><br></p>
-<h2 id="create-a-new-sketch"><a class="header" href="#create-a-new-sketch">Create a New Sketch</a></h2>
-<p>A sketch is a file with the <code>.ino</code> extension in which you will write the code to upload
-to the board.</p>
-<p>To create a new sketch , first navigate to the directory you want the sketch to be in , in the terminal , run the <code>aci</code> command , select a board and then use the
-Down arrow key to move down to the next option which <strong>Create a New Sketch</strong> and press <strong>Enter</strong>.</p>
-<p>This will then bring up an Input box where you can enter the name of your sketch.</p>
-<p><img src="images/recordings/new_sketch.gif" alt="new_sketch_gif" /></p>
-<p>Congrats , you have created a new sketch using the command line.</p>
-<p><br><br></p>
-<h2 id="edit-a-sketch"><a class="header" href="#edit-a-sketch">Edit a Sketch</a></h2>
-<p>After creating a new sketch , let us add the code to be uploaded to the board.</p>
-<p>We will create a basic LED Blinking program to blink the inbuilt LED of the board every 1 second.</p>
-<p>Before we get into editing the sketch , copy the below program :</p>
-<pre><code class="language-c">const int ledPin = 13;    //Depends on the board , for Uno and Nano it is pin 13
-
-void setup() {
-  //This function will run only once when the board boots up 
-  pinMode(ledPin , OUTPUT);  //Setting the ledPin as OUTPUT
-}
-
-void loop() {
-  //This function runs infinitely until it is stopped
-  digitalWrite(ledPin , HIGH);   //Turn ON the LED
-  delay(1000);     //1 second delay
-  digitalWrite(ledPin , LOW) ;  //Turn OFF the LED 
-  delay(1000);     //1 second delay
-}
+<pre><code class="language-bash">git clone https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
+cd bash_shell_script
+chmod +x main.sh 
+./main.sh 
 </code></pre>
-<p>Now , let us go to the terminal where <code>aci</code> is already running and then open the sketch <code>MyFirstSketch</code> ,
-we created previously.</p>
-<p>Make sure you have selected your <a href="#select-a-board">board</a> and the <a href="#create-a-new-sketch">sketch</a>
-has been created.</p>
-<p>Now navigate to the <strong>Edit the Sketch</strong> option using the Down arrow key and press <strong>Enter</strong>.</p>
-<p>This will bring up a file picker throuh which you can navigate using the arrow keys to find the folder
-in which the sketch is present.</p>
-<p>Once you find the folder , press <strong>Enter</strong> , you can then see the <code>.ino</code> file in the file picker.</p>
-<p>Press <strong>Enter</strong> again and you will see a choice picker to pick your preferred editor. I will be using
-<strong>NeoVim</strong> as my main editor. You can choose whatever editor feels comfortable to you.</p>
-<h4 id="note-"><a class="header" href="#note-"><strong><strong>NOTE</strong></strong> :</a></h4>
-<p>Make sure you have any one of the following editors installed :</p>
-<ol>
-<li><a href="./chapter_1.html#neovim">NeoVim</a></li>
-<li><a href="./chapter_1.html#vim">Vim</a></li>
-<li>Vi</li>
-<li>Nano</li>
-<li><a href="./chapter_1.html#micro">Micro</a></li>
-<li><a href="./chapter_1.html#vscode">Visual Studio Code</a></li>
-<li><a href="./chapter_1.html#vscodium">VSCodium</a></li>
-<li><a href="./chapter_1.html#hx">Helix</a></li>
+<ol start="2">
+<li>Using Homebrew</li>
 </ol>
-<p>Select the editor of your choice.</p>
-<p>You will now be able to edit the file.
-If you are opening the file for the first time , you will be greeted with this code</p>
-<pre><code class="language-c">void setup(){
-  //Run only once when the board boots up
-}
-
-void loop(){
-  //Run infinitely until stopped
-}
+<p>To download <code>aci</code> using Homebrew , you need to first have homebrew installed.
+To install homebrew , copy and paste this script in your terminal</p>
+<pre><code class="language-bash">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 </code></pre>
-<p>This is the default boilerplate code of any Arduino file.</p>
-<p>There are 2 functions <code>setup()</code> and <code>loop()</code>.</p>
-<p><code>setup()</code> runs only once. It runs when the board is switched ON.
-<code>loop()</code> run infnitely until it is stopped by switching OFF the board or by an interrupt.</p>
-<p>In the <a href="#edit-a-sketch">example code</a> that was given , we can see that we have defined the constant
-<code>ledPin</code> as an Output in the <code>setup()</code> function and toggled the LED in the <code>loop()</code> function.</p>
-<p>You can paste the <a href="#edit-a-sketch">example code</a> by deleting the default contents of the file and then
-pasting the given code.</p>
-<p>Then you can save the code and exit the editor.</p>
-<p>You will then be asked if you want to preview the contentns of your file to check for any kind of mistakes.</p>
-<p>Choose <strong>YES</strong> or <strong>NO</strong> by navigating between them using arrow keys.</p>
-<p>To quit the preview , press <code>q</code> on your keyboard.</p>
-<p><img src="images/recordings/edit_sketch.gif" alt="edit_sketch_gif" /></p>
-<p><br><br></p>
-<h4 id="note--1"><a class="header" href="#note--1"><strong><strong>NOTE</strong></strong> :</a></h4>
-<p>Each editor has different shortcuts to save and exit a file</p>
+<p>After Homebrew is installed , copy and paste the following commands in the terminal</p>
+<pre><code class="language-bash">brew update 
+brew tap vaishnav-sabari-girish/arduino-cli-interactive
+brew install aci 
+</code></pre>
+<h2 id="pre-requisites"><a class="header" href="#pre-requisites">Pre-requisites</a></h2>
+<p>For the <code>aci</code> tool to work as intended , there are 2 prerequisite tools required.</p>
+<h3 id="arduino-cli"><a class="header" href="#arduino-cli"><code>arduino-cli</code></a></h3>
+<p>Arduino-cli can be installed using 2 ways</p>
 <ol>
-<li>Vi/Vim/NeoVim/Helix : <code>:wq</code></li>
-<li>Nano : <code>Ctrl + S , Ctrl + X</code></li>
-<li>Micro : <code>Ctrl + S , Ctrl + Q</code></li>
-<li>Visual Studio Code/VSCodium : <code>Ctrl + S , Alt + F4</code></li>
+<li>Using Homebrew</li>
 </ol>
+<pre><code class="language-bash">brew update
+brew install arduino-cli
+</code></pre>
+<ol start="2">
+<li>Using their installation script</li>
+</ol>
+<pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
+</code></pre>
+<p>For other installation methods , check out their website <a href="https://arduino.github.io/arduino-cli/1.1/installation/">here</a></p>
+<h3 id="gum"><a class="header" href="#gum"><code>gum</code></a></h3>
+<p>This tool helps create awesome looking Terminal User Interfaces (TUI's).
+You can download <code>gum</code> in multiple ways.</p>
+<ol>
+<li>Using Homebrew</li>
+</ol>
+<pre><code class="language-bash">brew update
+brew install gum
+</code></pre>
+<ol start="2">
+<li>Using Package Managers</li>
+</ol>
+<pre><code class="language-bash">#Arch Linux (btw)
+pacman -S gum
+
+# Nix
+nix-env -iA nixpkgs.gum 
+
+# Flox 
+flox install gum 
+</code></pre>
+<p><br><br>
+You can also install a few alternative text editors if you do not want to use the default <code>nano</code> editor
+of linux.</p>
+<p>Some options are :</p>
+<ol>
+<li><a id="micro">Micro</a></li>
+</ol>
+<pre><code class="language-bash">sudo apt-get install micro
+</code></pre>
+<ol start="2">
+<li><a id="vim">Vim</a></li>
+</ol>
+<pre><code class="language-bash">sudo apt-get install vim 
+</code></pre>
+<ol start="3">
+<li><a id="neovim">NeoVim</a></li>
+</ol>
+<pre><code class="language-bash">sudo apt install nvim
+</code></pre>
+<ol start="4">
+<li><a id="gedit">Gedit</a></li>
+</ol>
+<pre><code class="language-bash">sudo apt install gedit
+</code></pre>
+<ol start="5">
+<li><a id="vscode">Visual Studio Code</a></li>
+</ol>
+<pre><code class="language-bash">
+sudo apt-get install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list &gt; /dev/null
+rm -f packages.microsoft.gpg
+</code></pre>
+<pre><code class="language-bash">
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install code # or code-insiders
+</code></pre>
+<ol start="6">
+<li><a id="vscodium">VSCodium</a></li>
+</ol>
+<pre><code class="language-bash">#Using snap 
+snap install codium --classic
+
+#Using Nix 
+nix-env -iA nixpkgs.vscodium
+
+#Arch Linux 
+yay -S vscodium-bin
+</code></pre>
+<pre><code class="language-bash">#For Debian/Ubuntu distros 
+
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+    | gpg --dearmor \
+    | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+
+echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
+    | sudo tee /etc/apt/sources.list.d/vscodium.list
+
+sudo apt update &amp;&amp; sudo apt install codium
+</code></pre>
+<ol start="7">
+<li><a id="hx">Helix</a></li>
+</ol>
+<pre><code class="language-bash">#For Debian/Ubuntu distos 
+sudo add-apt-repository ppa:maveonair/helix-editor
+sudo apt update
+sudo apt install helix
+
+#For Fedora/RHEl 
+sudo dnf install helix
+
+#Homebrew 
+brew install helix 
+
+#AppImage (First download the .AppImage file from the official helix repo)
+chmod +x helix-*.AppImage # change permission for executable mode
+./helix-*.AppImage # run helix
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="chapter_1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next prefetch" href="chapter_2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -277,10 +311,13 @@ pasting the given code.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="chapter_1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next prefetch" href="chapter_2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
