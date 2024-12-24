@@ -505,6 +505,59 @@ Select the one you want to install and click <strong>Enter</strong></p>
 <p>To check if the library has been installed , type <code>arduino-cli lib list</code> and check the table
 for the library you just installed. If it is present then the library has been installed successfully.</p>
 <p><img src="images/recordings/lib_install.gif" alt="Lib Install" /></p>
+<p>You have successuflly , compiled and uploaded a sketch and also installed a library.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-4--how-to-use-aci-part-3"><a class="header" href="#chapter-4--how-to-use-aci-part-3">Chapter 4  (How to use <code>aci</code> Part 3)</a></h1>
+<p>By the end of this chapter , you will be able to add 3rd party cores to the <code>aci</code> tools.
+These 3rd party cores are required to be able to use boards like ESP32 and ESP8266.</p>
+<p>To do this , we have to first create the config file.
+To create the config file , type the following in the terminal</p>
+<pre><code class="language-bash">arduino-cli config init 
+</code></pre>
+<p>This will create the <code>config.yaml</code> file at <code>/home/&lt;username&gt;/.arduino15/arduino-cli.yaml</code>.</p>
+<p>The previous step is optional. Because the script itself will create it for you.
+Just incase it doesn't , you have to create the .yaml file using the command given above.</p>
+<p>To do the above , type <code>aci</code> in the terminal , navigate to <strong>Edit Configurations</strong> option and choose your
+preferred editor.</p>
+<p>Then copy and paste the following links for :</p>
+<ol>
+<li>ESP8266</li>
+</ol>
+<p><code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code></p>
+<ol start="2">
+<li>ESP32</li>
+</ol>
+<p><code>https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</code></p>
+<p>Then exit the editor.</p>
+<p>Then in the terminal type :</p>
+<pre><code class="language-bash">arduino-cli core update-index
+arduino-cli core install esp32:esp32 (esp8266:esp8266 for ESP8266)
+arduino-cli board install 
+
+#To list all boards 
+arduino-cli board listall
+</code></pre>
+<p><img src="images/recordings/new_core.gif" alt="New Core" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="thank-you"><a class="header" href="#thank-you">Thank you</a></h1>
+<p>I want to take a moment to express my heartfelt gratitude to you for choosing arduino-cli-interactive.
+Your support and feedback have been invaluable in shaping this tool into what it is today.
+Whether you’re a hobbyist, a student, or a professional, your trust motivates me to keep improving
+and delivering a better experience for everyone in the Arduino community.</p>
+<p>Your enthusiasm for this project means the world to me! If you’ve enjoyed using arduino-cli-interactive,
+I kindly request you to star ⭐ the repository on <a href="https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive">GitHub</a>
+to help it reach more users. You can also fork 🍴
+it to make your own contributions or explore its capabilities further.</p>
+<p>I also invite you to stay connected with me as I continue this exciting journey.
+Be sure to follow me on <a href="https://medium.com/@forgamesonly684">Medium</a> ,
+<a href="https://dev.to/vaishnav_sabari_girish">Dev.to</a> and <a href="https://github.com/Vaishnav-Sabari-Girish">GitHub</a>
+for insightful blogs, updates, and tutorials related to Arduino, CLI tools, and embedded systems.
+There’s so much more coming your way, including new features for this tool and engaging content on
+these platforms.</p>
+<p>Your support keeps this project alive, and your feedback helps me grow. If you have any suggestions,
+feature requests, or just want to share how this tool has helped you, don’t hesitate to reach out.
+Together, we can make arduino-cli-interactive an even more powerful tool for the Arduino community.</p>
+<p>Thank you once again for your trust and support. Let’s build something amazing, one project at a time!
+<br><br></p>
+<p><img src="images/thank_you.png" alt="Thank You" /></p>
 
                     </main>
 
