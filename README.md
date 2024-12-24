@@ -118,11 +118,7 @@ brew uninstall aci
 brew untap vaishnav-sabari-girish/arduino-cli-interactive
 ```
 
-Check out this asciinema Recording to know the basics of using `arduino-cli-interactive`
+Refer the below recording to see it in action
 
-[![asciicast](https://asciinema.org/a/SUQLo5g4TV0UL2v9YyBdpWuC3.svg)](https://asciinema.org/a/SUQLo5g4TV0UL2v9YyBdpWuC3)
-
-Incase asciinema doesn't work , see this
-
-![VHS Recording](https://vhs.charm.sh/vhs-24NZrbEcj9OX2lbQKOJyua.gif)
+![action](final_cast.gif)
 
