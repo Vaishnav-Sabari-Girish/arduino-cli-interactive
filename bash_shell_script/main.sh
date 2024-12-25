@@ -8,6 +8,33 @@ installed_editors=()
 
 sketch_file=""
 
+list_libraries(){
+  echo "These are the libraries installed in your system"
+  printf "\n"
+  arduino-cli lib list
+
+  gum confirm "Return to homepage ?" && main || :
+}
+
+lib_examples() {
+  installed_editors=()
+
+  local lib_example=$(arduino-cli lib list | tail -n +2 | awk '{print $1, $2}' \
+    | sed 's/  *[0-9][^ ]*//g' \
+    | sed 's/-//g' | gum filter --placeholder "Input Library name to get example" --indicator=">") 
+  local example_chosen=$(arduino-cli lib examples $lib_example | tail -n +2 |  awk 'NF' | gum choose)
+  
+  local lib_dir=$(echo $example_chosen | sed 's/^[[:space:]-]*//')
+  
+  local ex_file=$(gum file $lib_dir)
+
+  gum pager < $ex_file
+  sketch_file=("${lib_dir}${ex_file}")
+
+  main
+  
+}
+
 edit_config_file() {
   if [ -e $HOME/.arduino15/arduino-cli.yaml ]; then
     arduino-cli config init 
@@ -162,7 +189,9 @@ main() {
         Sketch file :  $sketch_file"
 
   sleep 1
-  local choice=$(gum choose "Select Board" "Create New Sketch" "Edit the Sketch" "Compile Code" "Upload Code" "Install Libraries" "Edit Configurations" "Exit")
+  local choice=$(gum choose "Select Board" "Create New Sketch" "Edit the Sketch"\
+    "Compile Code" "Upload Code" "Install Libraries" "Display Installed Libraries"\
+    "View Examples" "Edit Configurations" "Exit")
 
   case $choice in 
     "Create New Sketch")
@@ -184,6 +213,12 @@ main() {
       ;;
     "Install Libraries")
       install_libraries
+      ;;
+    "Display Installed Libraries")
+      list_libraries
+      ;;
+    "View Examples")
+      lib_examples
       ;;
     "Select Board")
       list_installed_boards
