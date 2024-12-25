@@ -125,4 +125,4 @@ Refer the below recording to see it in action
 
 Documentation short URL 
 
-[](https://1pt.co/aci-docs)
+https://1pt.co/aci-docs
