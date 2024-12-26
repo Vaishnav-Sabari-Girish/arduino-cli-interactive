@@ -171,4 +171,15 @@ chmod +x helix-*.AppImage # change permission for executable mode
 ./helix-*.AppImage # run helix
 ```
 
+## Post Installation 
 
+After the installation of `aci` there is one small step you have to do. 
+
+Type the following in the terminal 
+
+```bash
+arduino-cli board listall
+arduino-cli core install arduino:avr
+```
+
+This step will make sure you have the cores of the basic Arduino Boards like Uno , Nano etc. 
