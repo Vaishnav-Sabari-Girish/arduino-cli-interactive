@@ -292,6 +292,13 @@ brew install helix
 chmod +x helix-*.AppImage # change permission for executable mode
 ./helix-*.AppImage # run helix
 </code></pre>
+<h2 id="post-installation"><a class="header" href="#post-installation">Post Installation</a></h2>
+<p>After the installation of <code>aci</code> there is one small step you have to do.</p>
+<p>Type the following in the terminal</p>
+<pre><code class="language-bash">arduino-cli board listall
+arduino-cli core install arduino:avr
+</code></pre>
+<p>This step will make sure you have the cores of the basic Arduino Boards like Uno , Nano etc.</p>
 
                     </main>
 

@@ -350,6 +350,13 @@ brew install helix
 chmod +x helix-*.AppImage # change permission for executable mode
 ./helix-*.AppImage # run helix
 </code></pre>
+<h2 id="post-installation"><a class="header" href="#post-installation">Post Installation</a></h2>
+<p>After the installation of <code>aci</code> there is one small step you have to do.</p>
+<p>Type the following in the terminal</p>
+<pre><code class="language-bash">arduino-cli board listall
+arduino-cli core install arduino:avr
+</code></pre>
+<p>This step will make sure you have the cores of the basic Arduino Boards like Uno , Nano etc.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-2-how-to-use-aci-part---1"><a class="header" href="#chapter-2-how-to-use-aci-part---1">Chapter 2 (How to use <code>aci</code> PART - 1)</a></h1>
 <p>By the end of this chapter , you will be able to do the following :</p>
 <ol>
@@ -537,6 +544,19 @@ arduino-cli board install
 arduino-cli board listall
 </code></pre>
 <p><img src="images/recordings/new_core.gif" alt="New Core" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-5-how-to-use-aci-part-4"><a class="header" href="#chapter-5-how-to-use-aci-part-4">Chapter 5 (How to use <code>aci</code> Part 4)</a></h1>
+<p><strong><strong>NOTE</strong></strong> : These features were introduced from <code>aci</code> version <code>1.0.2</code>.</p>
+<p>By the end of this chapter , you will be able to do the following :</p>
+<ol>
+<li><a href="chapter_5.html#display-installed-libraries">Display the installed libraries</a></li>
+<li><a href="chapter_5.html#view-library-examples">View the library examples</a>.</li>
+</ol>
+<h2 id="display-installed-libraries"><a class="header" href="#display-installed-libraries">Display Installed Libraries</a></h2>
+<p>We installed the libraries as shown in <a href="./chapter_3.html#install-libraries">Chapter 3</a></p>
+<p>To confirm that they have been installed and to also view all out installed libraries ,
+navigate to the <strong>Display Install Libraries</strong> option using the arrow keys and press <strong>Enter</strong>.</p>
+<p>You will now be able to see all the libraries installed in our system.</p>
+<p><img src="images/recordings/display_lib.gif" alt="Display Installed Libraries" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="thank-you"><a class="header" href="#thank-you">Thank you</a></h1>
 <p>I want to take a moment to express my heartfelt gratitude to you for choosing arduino-cli-interactive.
 Your support and feedback have been invaluable in shaping this tool into what it is today.
