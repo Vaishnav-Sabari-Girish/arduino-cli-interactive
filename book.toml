@@ -1,0 +1,9 @@
+[book]
+authors = ["vaishnav_sabari_girish"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Arduino CLI Interactive (aci)"
+
+[src]
+images = ["images"]
