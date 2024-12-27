@@ -123,6 +123,12 @@ Refer the below recording to see it in action
 ![action](final_cast.gif)
 
 
+The below image gives me the basic repository details in the command line. 
+
+Tool used is `onefetch`
+
+![Repo deets](my_repo_deets.png)
+
 Documentation short URL 
 
 https://1pt.co/aci-docs

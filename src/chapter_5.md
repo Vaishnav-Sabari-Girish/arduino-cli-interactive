@@ -28,10 +28,15 @@ examples that outline how to use their libraries and the functions present in th
 To see the examples of the libraries you installed , navigate to the **View Examples** option using the 
 arrow keys and press **Enter**. 
 
-Then naviggate to the library whose examples you want to view and press **Enter**. 
+Then navigate to the library whose examples you want to view and press **Enter**. 
 
 A viewing widget pops up that lets you see the contents of the example file. 
 
 You won't be able to edit the file. 
 
+You can also search for specific phrases in the widget. 
 
+You will also see that the *Sketch File* text on the top will have the path of the example you chose, 
+making it easier for you to upload that very example if necessary. 
+
+![Lib Examples](images/recordings/lib_examples.gif)
