@@ -1,6 +1,6 @@
 # Thank you
 
-I want to take a moment to express my heartfelt gratitude to you for choosing arduino-cli-interactive. 
+I want to take a moment to express my heartfelt gratitude to you for choosing `arduino-cli-interactive`. 
 Your support and feedback have been invaluable in shaping this tool into what it is today. 
 Whether you’re a hobbyist, a student, or a professional, your trust motivates me to keep improving 
 and delivering a better experience for everyone in the Arduino community.
@@ -20,6 +20,9 @@ these platforms.
 Your support keeps this project alive, and your feedback helps me grow. If you have any suggestions, 
 feature requests, or just want to share how this tool has helped you, don’t hesitate to reach out. 
 Together, we can make arduino-cli-interactive an even more powerful tool for the Arduino community.
+
+**Special Thanks to [Charm](https://charm.sh) and the [Arduino](https://www.arduino.cc) for providing, 
+the tools (`gum` and `arduino-cli`) to make this project a success. 
 
 Thank you once again for your trust and support. Let’s build something amazing, one project at a time!
 <br><br>

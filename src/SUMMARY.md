@@ -10,3 +10,4 @@
 - [Chapter 4](./chapter_4.md)
 - [Chapter 5](./chapter_5.md)
 - [Thank you](./ty.md)
+- [Contact Me](./contact.md)
