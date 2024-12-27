@@ -120,7 +120,7 @@ brew untap vaishnav-sabari-girish/arduino-cli-interactive
 
 Refer the below recording to see it in action
 
-![action](final_cast.gif)
+![action](src/images/recordings/final_cast.gif)
 
 
 The below image gives me the basic repository details in the command line. 
@@ -132,3 +132,28 @@ Tool used is `onefetch`
 Documentation short URL 
 
 https://1pt.co/aci-docs
+
+
+### Features provided by `aci`
+
+
+- [x] Select a board
+- [x] Create a new Sketch
+- [x] Edit the sketch 
+- [x] Compile Code
+- [x] Upload Code for : 
+  - [x] Old Bootloader
+  - [x] New Bootloader 
+- [x] Install 3rd Party Cores (For ESP8266 and ESP32)
+- [x] Install Libraries 
+- [x] View Install Libraries 
+- [x] Search , compile and upload the examples of the installed libraries 
+- [ ] Basic Examples of beginner codes like Blink , print to serail monitor etc. (Expected in V1.0.3, 
+coming soon .....)
+
+---
+
+#### Legends
+- [x] Features present 
+- [ ] Features to be added
+
