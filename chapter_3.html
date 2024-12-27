@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Chapter 4 - Arduino CLI Interactive (aci)</title>
+        <title>Chapter 3 - Arduino CLI Interactive (aci)</title>
 
 
         <!-- Custom HTML head -->
@@ -152,47 +152,63 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="chapter-4--how-to-use-aci-part-3"><a class="header" href="#chapter-4--how-to-use-aci-part-3">Chapter 4  (How to use <code>aci</code> Part 3)</a></h1>
-<p>By the end of this chapter , you will be able to add 3rd party cores to the <code>aci</code> tools.
-These 3rd party cores are required to be able to use boards like ESP32 and ESP8266.</p>
-<p>To do this , we have to first create the config file.
-To create the config file , type the following in the terminal</p>
-<pre><code class="language-bash">arduino-cli config init 
-</code></pre>
-<p>This will create the <code>config.yaml</code> file at <code>/home/&lt;username&gt;/.arduino15/arduino-cli.yaml</code>.</p>
-<p>The previous step is optional. Because the script itself will create it for you.
-Just incase it doesn't , you have to create the .yaml file using the command given above.</p>
-<p>To do the above , type <code>aci</code> in the terminal , navigate to <strong>Edit Configurations</strong> option and choose your
-preferred editor.</p>
-<p>Then copy and paste the following links for :</p>
+                        <h1 id="chapter-3-how-to-use-aci-part---2"><a class="header" href="#chapter-3-how-to-use-aci-part---2">Chapter 3 (How to use <code>aci</code> Part - 2)</a></h1>
+<p>By the end of this chapter , you will be able to</p>
 <ol>
-<li>ESP8266</li>
+<li><a href="#compile-code">Compile Code for a specific board</a></li>
+<li><a href="#upload-code">Upload Code to the board</a></li>
+<li><a href="#install-libraries">Install Libraries</a>
+<br><br></li>
 </ol>
-<p><code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code></p>
-<ol start="2">
-<li>ESP32</li>
-</ol>
-<p><code>https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</code></p>
-<p>Then exit the editor.</p>
-<p>Then in the terminal type :</p>
-<pre><code class="language-bash">arduino-cli core update-index
-arduino-cli core install esp32:esp32 (esp8266:esp8266 for ESP8266)
-arduino-cli board install 
-
-#To list all boards 
-arduino-cli board listall
-</code></pre>
-<p><img src="images/recordings/new_core.gif" alt="New Core" /></p>
+<h2 id="compile-code"><a class="header" href="#compile-code">Compile Code</a></h2>
+<p>To compile the code in the Sketch you created <a href="./chapter_2.html#edit-a-sketch">previously</a> , we open the
+and make sure that <code>aci</code> is running and you must have <a href="./chapter_2.html#select-a-board">Selected the Board</a> ,
+<a href="./chapter_2.html#create-a-new-sketch">Created a new Sketch</a> and <a href="./chapter_2.html#edit-a-sketch">Edited the Code</a>.</p>
+<p>We then use the Arrow keys to naviigate to the <strong>Compile Code</strong> Option and press <strong>Enter</strong>.</p>
+<p>Since you have already selected the board , it will compile the code for that specific board.</p>
+<p>In the following example we will compile the code for an Arduino Nano.</p>
+<p><img src="images/recordings/compile_code.gif" alt="compile code gif" /></p>
+<p><br><br></p>
+<h2 id="upload-code"><a class="header" href="#upload-code">Upload Code</a></h2>
+<p>To upload the code , you need to first <a href="#compile-code">Compile the code</a> and then back in the homepage ,
+navigate to the <strong>Upload Code</strong> option and press <strong>Enter</strong></p>
+<p>Once you are inside the <strong>Upload Code</strong> , you will be asked to choose the Serial Port your board
+is connected to.</p>
+<p>In Linux/macOS , the Serial port will show up as <code>/dev/ttyUSB0</code> and for windows , it will show up as
+<code>COM7</code> or any other number other than 7.</p>
+<p>After selecting the Serial Port , you will then be asked to choose between OLD and NEW Bootloaders.
+OLD Bootloaders as usually only for Arduino Nanos , so make sure you do not mess up that one.
+Choose between OLD and NEW Bootloaders and the the code will be uploaded.</p>
+<p>In the below recordings , one will be for Arduino Nano (Old Bootloader) and one for the WeMOS D1 R1
+(New Bootloader).</p>
+<h3 id="old-bootloader"><a class="header" href="#old-bootloader">Old Bootloader.</a></h3>
+<p><img src="images/recordings/upload_code_old.gif" alt="Old Bootloader" /></p>
+<h3 id="new-bootloader"><a class="header" href="#new-bootloader">New Bootloader</a></h3>
+<p><img src="images/recordings/upload_code_new.gif" alt="New Bootloader" /></p>
+<p><br><br></p>
+<h2 id="install-libraries"><a class="header" href="#install-libraries">Install Libraries</a></h2>
+<p>To install libraries , there is no need to Select a board or Create a New Sketch.</p>
+<p>Open a new terminal and type <code>aci</code>.
+The Navigate to the <strong>Install Libraries</strong> option using the Arrow Keys and click <strong>Enter</strong></p>
+<p>Now an input dialog box will appear prompting for the name of the library.
+Enter the name of the library and press <strong>Enter</strong></p>
+<p>When do you do , there will be a list of libraries that have the name you entered.
+Select the one you want to install and click <strong>Enter</strong></p>
+<p>Let us install the <strong>DHT11</strong> Library by <strong>Dhrubha Saha</strong>.</p>
+<p>To check if the library has been installed , type <code>arduino-cli lib list</code> and check the table
+for the library you just installed. If it is present then the library has been installed successfully.</p>
+<p><img src="images/recordings/lib_install.gif" alt="Lib Install" /></p>
+<p>You have successuflly , compiled and uploaded a sketch and also installed a library.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="chapter_3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="chapter_2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="chapter_5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="chapter_4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -202,33 +218,17 @@ arduino-cli board listall
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="chapter_3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="chapter_2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="chapter_5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="chapter_4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

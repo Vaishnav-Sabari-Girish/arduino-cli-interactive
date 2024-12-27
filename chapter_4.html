@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Chapter 5 - Arduino CLI Interactive (aci)</title>
+        <title>Chapter 4 - Arduino CLI Interactive (aci)</title>
 
 
         <!-- Custom HTML head -->
@@ -152,43 +152,47 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="chapter-5-how-to-use-aci-part-4"><a class="header" href="#chapter-5-how-to-use-aci-part-4">Chapter 5 (How to use <code>aci</code> Part 4)</a></h1>
-<p><strong><strong>NOTE</strong></strong> : These features were introduced from <code>aci</code> version <code>1.0.2</code>.</p>
-<p>By the end of this chapter , you will be able to do the following :</p>
+                        <h1 id="chapter-4--how-to-use-aci-part-3"><a class="header" href="#chapter-4--how-to-use-aci-part-3">Chapter 4  (How to use <code>aci</code> Part 3)</a></h1>
+<p>By the end of this chapter , you will be able to add 3rd party cores to the <code>aci</code> tools.
+These 3rd party cores are required to be able to use boards like ESP32 and ESP8266.</p>
+<p>To do this , we have to first create the config file.
+To create the config file , type the following in the terminal</p>
+<pre><code class="language-bash">arduino-cli config init 
+</code></pre>
+<p>This will create the <code>config.yaml</code> file at <code>/home/&lt;username&gt;/.arduino15/arduino-cli.yaml</code>.</p>
+<p>The previous step is optional. Because the script itself will create it for you.
+Just incase it doesn't , you have to create the .yaml file using the command given above.</p>
+<p>To do the above , type <code>aci</code> in the terminal , navigate to <strong>Edit Configurations</strong> option and choose your
+preferred editor.</p>
+<p>Then copy and paste the following links for :</p>
 <ol>
-<li><a href="#display-installed-libraries">Display the installed libraries</a></li>
-<li><a href="#view-library-examples">View the library examples</a>.</li>
+<li>ESP8266</li>
 </ol>
-<p><br><br></p>
-<h2 id="display-installed-libraries"><a class="header" href="#display-installed-libraries">Display Installed Libraries</a></h2>
-<p>We installed the libraries as shown in <a href="./chapter_3.html#install-libraries">Chapter 3</a></p>
-<p>To confirm that they have been installed and to also view all out installed libraries ,
-navigate to the <strong>Display Install Libraries</strong> option using the arrow keys and press <strong>Enter</strong>.</p>
-<p>You will now be able to see all the libraries installed in our system.</p>
-<p><img src="images/recordings/display_lib.gif" alt="Display Installed Libraries" /></p>
-<p><br><br></p>
-<h2 id="view-library-examples"><a class="header" href="#view-library-examples">View Library Examples</a></h2>
-<p>To make it easier for first time users , the developers of each library have created a few basic
-examples that outline how to use their libraries and the functions present in those libraries.</p>
-<p>To see the examples of the libraries you installed , navigate to the <strong>View Examples</strong> option using the
-arrow keys and press <strong>Enter</strong>.</p>
-<p>Then navigate to the library whose examples you want to view and press <strong>Enter</strong>.</p>
-<p>A viewing widget pops up that lets you see the contents of the example file.</p>
-<p>You won't be able to edit the file.</p>
-<p>You can also search for specific phrases in the widget.</p>
-<p>You will also see that the <em>Sketch File</em> text on the top will have the path of the example you chose,
-making it easier for you to upload that very example if necessary.</p>
-<p><img src="images/recordings/lib_examples.gif" alt="Lib Examples" /></p>
+<p><code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code></p>
+<ol start="2">
+<li>ESP32</li>
+</ol>
+<p><code>https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</code></p>
+<p>Then exit the editor.</p>
+<p>Then in the terminal type :</p>
+<pre><code class="language-bash">arduino-cli core update-index
+arduino-cli core install esp32:esp32 (esp8266:esp8266 for ESP8266)
+arduino-cli board install 
+
+#To list all boards 
+arduino-cli board listall
+</code></pre>
+<p><img src="images/recordings/new_core.gif" alt="New Core" /></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="chapter_4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="chapter_3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="ty.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="chapter_5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -198,33 +202,17 @@ making it easier for you to upload that very example if necessary.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="chapter_4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="chapter_3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="ty.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="chapter_5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
