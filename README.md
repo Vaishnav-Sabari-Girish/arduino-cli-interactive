@@ -151,6 +151,7 @@ https://1pt.co/aci-docs
 - [ ] Basic Examples of beginner codes like Blink , print to serail monitor etc. (Expected in V1.0.3, 
 coming soon .....)
 - [ ] Serial Monitor. (Expected in V1.0.3 or V1.0.4). 
+- [ ] TL;DR to make it easier to use `aci` (Expected in V1.0.4)
 
 ---
 
