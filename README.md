@@ -24,6 +24,17 @@ chmod +x main.sh
 ./main.sh 
 ```
 
+The open your `~/.bashrc` or `~/.zshrc` file and add this alias 
+```bash
+alias aci="<path to the cloned repository>"
+```
+
+Then in the terminal type 
+```bash
+source ~/.bashrc #For bash users 
+source ~/.zshrc  #For zsh users
+```
+
 ### Pre-requisites
 
 #### 1. `arduino-cli` 
@@ -111,7 +122,23 @@ arduino-cli board listall
 arduino-cli core install arduino:avr
 ```
 
-To Uninstall 
+### To update the app 
+
+#### Using Homebrew
+```bash 
+brew update && brew upgrade aci
+```
+#### By Cloning the lastest repository 
+Delete the folder named `arduino-cli-interactive` from the computer and then 
+
+```bash 
+git clone https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
+cd bash_shell_script
+chmod +x main.sh 
+./main.sh 
+```
+
+### To Uninstall 
 
 ```bash
 brew uninstall aci 
@@ -152,6 +179,7 @@ https://1pt.co/aci-docs
 coming soon .....)
 - [ ] Serial Monitor. (Expected in V1.0.3 or V1.0.4). 
 - [ ] TL;DR to make it easier to use `aci` (Expected in V1.0.4)
+- [ ] App Update/New release notifier (Expected in V1.0.3)
 
 ---
 
