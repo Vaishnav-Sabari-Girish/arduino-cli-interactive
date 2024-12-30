@@ -2,14 +2,25 @@
 
 BOARD_NAME=""
 FQBN_SELECTED=""
+SERIAL_PORT=""
 
 editors=("nano" "micro" "gedit" "vim" "nvim" "hx" "code" "codium")
 installed_editors=()
 
 sketch_file=""
 
+serial_monitor() {
+  local baud_rate=$(gum input --placeholder "Baud Rate")
+  arduino-cli monitor -p $SERIAL_PORT -b $FQBN_SELECTED --config $baud_rate
+  trap 'gum confirm "Return to Homepage ?" && main || exit'  SIGINT
+
+  echo "Press Ctrl+C again"
+  while true; do
+    sleep 1
+  done
+}
 check_for_updates() {
-  local current_version="v1.0.3"
+  local current_version="v1.0.4"
   local latest_version=$( curl -s https://api.github.com/repos/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/latest | jq -r '.tag_name')
 
   if test $current_version != $latest_version 
@@ -124,16 +135,16 @@ create_new_sketch() {
 upload_code() {
   #local file_u=$(gum file --height 5)
   echo "Select Serial port to which the board is connected"
-  local serial_port=$(arduino-cli board list | awk '/\/dev\/tty/ {print $1}' | gum choose)
+  SERIAL_PORT=$(arduino-cli board list | awk '/\/dev\/tty/ {print $1}' | gum choose)
   echo "Is your bootloader old (mostly for Nano) or the latest one"
   local booltoader_old_new=$(gum choose "Old Bootloader" "New Bootloader")
   
   case $booltoader_old_new in 
     "New Bootloader")
-      arduino-cli upload --fqbn $FQBN_SELECTED -p $serial_port $sketch_file
+      arduino-cli upload --fqbn $FQBN_SELECTED -p $SERIAL_PORT $sketch_file
       ;;
     "Old Bootloader")
-      arduino-cli upload --fqbn "${FQBN_SELECTED}:cpu=atmega328old" -p $serial_port $sketch_file
+      arduino-cli upload --fqbn "${FQBN_SELECTED}:cpu=atmega328old" -p $SERIAL_PORT $sketch_file
       ;;
     *)
       echo "Invalid Option"
@@ -209,11 +220,12 @@ main() {
   echo "$intro" | gum style --foreground 47 --border-foreground 217 --border double --align center --width 50
   echo "You have chosen the board : $BOARD_NAME 
         with FQBN : $FQBN_SELECTED
-        Sketch file :  $sketch_file"
+        Sketch file :  $sketch_file
+        Serial Port : $SERIAL_PORT"
 
   sleep 1
   local choice=$(gum choose "Select Board" "Create New Sketch" "Edit the Sketch"\
-    "Compile Code" "Upload Code" "Install Libraries" "Display Installed Libraries"\
+    "Compile Code" "Upload Code" "Serial Monitor" "Install Libraries" "Display Installed Libraries"\
     "View Examples" "Edit Configurations" "Exit")
 
   case $choice in 
@@ -233,6 +245,9 @@ main() {
       ;;
     "Upload Code")
       upload_code
+      ;;
+    "Serial Monitor")
+      serial_monitor
       ;;
     "Install Libraries")
       install_libraries
