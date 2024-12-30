@@ -8,6 +8,28 @@ installed_editors=()
 
 sketch_file=""
 
+check_for_updates() {
+  local current_version="v1.0.2"
+  local latest_version=$( curl -s https://api.github.com/repos/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/latest | jq -r '.tag_name')
+
+  if test $current_version != $latest_version 
+  then 
+    cat >&2 <<EOF
+
+📦 Update available!
+Current version: $current_version
+Latest version:  $latest_version
+
+To upgrade, run:
+    brew upgrade Vaishnav-Sabari-Girish/arduino-cli-interactive`
+
+EOF
+            return 2  # Return code 2 indicates update available
+    fi
+
+    return 0  # Return code 0 indicates up to date
+}
+
 list_libraries(){
   echo "These are the libraries installed in your system"
   printf "\n"
@@ -182,6 +204,7 @@ install_libraries() {
 main() {
   clear
 
+  check_for_updates
   local intro="Welcome to arduino-cli-interactive"
   echo "$intro" | gum style --foreground 47 --border-foreground 217 --border double --align center --width 50
   echo "You have chosen the board : $BOARD_NAME 
