@@ -85,29 +85,23 @@ It makes it easy to create good looking Terminal User Interface (TUI)
 
 To install `gum` 
 
-<details>
-  <summary>Using Package Managers</summary>
-    
-    ```bash 
+```bash 
+# macOS or Linux
+brew install gum
 
-    # macOS or Linux
-    brew install gum
+# Arch Linux (btw)
+pacman -S gum
 
-    # Arch Linux (btw)
-    pacman -S gum
+# Nix
+nix-env -iA nixpkgs.gum
 
-    # Nix
-    nix-env -iA nixpkgs.gum
+# Flox
+flox install gum
 
-    # Flox
-    flox install gum
-
-    # Windows (via WinGet or Scoop)  (Use Linux, or WSL instead of 
-                                      directly installing in Windows)
-    winget install charmbracelet.gum
-    scoop install charm-gum
-    ```
-</details>
+# Windows (via WinGet or Scoop)  (Use Linux, or WSL instead of directly installing in Windows)
+winget install charmbracelet.gum
+scoop install charm-gum
+```
 
 For more installation methods , refer the [GitHub repository of `gum`](https://github.com/charmbracelet/gum)
 
