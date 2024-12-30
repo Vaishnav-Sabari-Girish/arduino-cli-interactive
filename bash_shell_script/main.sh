@@ -9,7 +9,7 @@ installed_editors=()
 sketch_file=""
 
 check_for_updates() {
-  local current_version="v1.0.2"
+  local current_version="v1.0.3"
   local latest_version=$( curl -s https://api.github.com/repos/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/latest | jq -r '.tag_name')
 
   if test $current_version != $latest_version 
