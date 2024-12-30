@@ -128,7 +128,7 @@ arduino-cli core install arduino:avr
 ```bash 
 brew update && brew upgrade aci
 ```
-#### By Cloning the lastest repository 
+#### By Cloning the latest repository 
 Delete the folder named `arduino-cli-interactive` from the computer and then 
 
 ```bash 
