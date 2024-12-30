@@ -169,7 +169,7 @@ https://1pt.co/aci-docs
 - [x] Install Libraries 
 - [x] View Install Libraries 
 - [x] Search , compile and upload the examples of the installed libraries 
-- [ ] Basic Examples of beginner codes like Blink , print to serail monitor etc. (Expected in V1.0.4, 
+- [ ] Basic Examples of beginner codes like Blink , print to serial monitor etc. (Expected in V1.0.4, 
 coming soon .....)
 - [ ] Serial Monitor. (Expected in V1.0.3 or V1.0.4). 
 - [ ] TL;DR to make it easier to use `aci` (Expected in V1.0.4)
