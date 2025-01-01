@@ -1,0 +1,5 @@
+*.tar.gz
+*.db
+*.txt
+check_version.md
+github_repo_key.md
