@@ -21,7 +21,12 @@ serial_monitor() {
 }
 check_for_updates() {
   local current_version="v1.0.4"
-  local latest_version=$( curl -s https://api.github.com/repos/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/latest | jq -r '.tag_name')
+  local latest_version=$(curl -s -H "Authorization: token $ACI_GITHUB_TOKEN"\
+    -H "Accept: application/vnd.github.v3+json"\
+    "https://api.github.com/repos/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/latest"\
+    | jq -r '.tag_name')
+  
+  
 
   if test $current_version != $latest_version 
   then 
