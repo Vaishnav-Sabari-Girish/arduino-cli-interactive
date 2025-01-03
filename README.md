@@ -1,6 +1,6 @@
 ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)`
 
-
+ 
 # Arduino Interactive CLI
 
 This tool is made specifically for those who want to transition from the Arduino IDE to the CLI , but are still scared or intimidated by the command line. 
@@ -171,6 +171,7 @@ https://1pt.co/aci-docs
 - [ ] Basic Examples of beginner codes like Blink , print to serial monitor etc. (Expected in future releases). 
 - [x] Serial Monitor. (Expected in V1.0.3 or V1.0.4). 
 - [ ] TL;DR to make it easier to use `aci` (Expected in future releases)
+- [ ] Create a release fo Nushell and Fish (Expected in the future)
 
 ---
 
