@@ -1,0 +1,8 @@
+[package]
+name = "aci_rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cursive = "*"
+lazy_static = "1.5.0"
