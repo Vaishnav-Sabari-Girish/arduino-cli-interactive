@@ -15,3 +15,7 @@ path = "src/bin/boards_list.rs"
 [[bin]]
 name = "list_dir"
 path = "src/bin/dir_list.rs"
+
+[[bin]]
+name = "serial"
+path = "src/bin/serial_port.rs"
