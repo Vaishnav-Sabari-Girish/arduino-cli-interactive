@@ -6,3 +6,7 @@ edition = "2021"
 [dependencies]
 cursive = "*"
 lazy_static = "1.5.0"
+
+[[bin]]
+name = "boards"
+path = "src/bin/boards_list.rs"
