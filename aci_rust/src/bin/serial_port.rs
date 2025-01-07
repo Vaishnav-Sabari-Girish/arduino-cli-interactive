@@ -1,10 +1,17 @@
-use cursive::views::{Dialog, SelectView};
+use cursive::views::{Button, Dialog, LinearLayout, SelectView};
 use cursive::{Cursive, CursiveExt};
 use std::process::Command;
 
 fn main() {
     let mut siv = Cursive::default();
+    siv.add_global_callback('q', Cursive::quit);
 
+    let homepage = LinearLayout::vertical().child(Button::new("Serial Port", serial_port));
+    siv.add_layer(homepage);
+    siv.run();
+}
+
+fn serial_port(s: &mut Cursive) {
     // Execute the command and capture the output
     let output = Command::new("arduino-cli")
         .arg("board")
@@ -43,11 +50,9 @@ fn main() {
     });
 
     // Add the SelectView to the UI
-    siv.add_layer(
+    s.add_layer(
         Dialog::around(select_view)
             .title("Select an Arduino Device")
             .button("Quit", |s| s.quit()),
     );
-
-    siv.run();
 }
