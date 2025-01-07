@@ -6,7 +6,12 @@ edition = "2021"
 [dependencies]
 cursive = "*"
 lazy_static = "1.5.0"
+walkdir = "*"
 
 [[bin]]
 name = "boards"
 path = "src/bin/boards_list.rs"
+
+[[bin]]
+name = "list_dir"
+path = "src/bin/dir_list.rs"
