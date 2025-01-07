@@ -1,4 +1,4 @@
-use cursive::view::{Nameable, Resizable, View};
+use cursive::view::{Nameable, Resizable};
 use cursive::views::{Button, Dialog, EditView, LinearLayout, ScrollView, SelectView};
 use cursive::{Cursive, CursiveExt};
 use lazy_static::lazy_static;
