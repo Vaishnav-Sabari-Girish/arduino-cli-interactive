@@ -9,6 +9,10 @@ lazy_static = "1.5.0"
 walkdir = "*"
 
 [[bin]]
+name = "main"
+path = "src/main.rs"
+
+[[bin]]
 name = "boards"
 path = "src/bin/boards_list.rs"
 

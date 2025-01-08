@@ -19,31 +19,70 @@ serial_monitor() {
     sleep 1
   done
 }
+
 check_for_updates() {
   local current_version="v1.0.4"
-  local latest_version=$(curl -s -H "Authorization: token $ACI_GITHUB_TOKEN"\
-    -H "Accept: application/vnd.github.v3+json"\
-    "https://api.github.com/repos/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/latest"\
-    | jq -r '.tag_name')
+  
+  # First check if GitHub token is set
+  if [ -z "$ACI_GITHUB_TOKEN" ]; then
+    echo "Warning: ACI_GITHUB_TOKEN is not set" >&2
+    echo "Please set your GitHub token with: export ACI_GITHUB_TOKEN='your_token_here'" >&2
+    return 1
+  fi
   
   
-
-  if test $current_version != $latest_version 
-  then 
-    cat >&2 <<EOF
-
+  # Get the latest version with error checking and store full response
+  # Added -k to skip SSL verification
+  local api_response=$(curl -k -s -H "Authorization: token $ACI_GITHUB_TOKEN" \
+    -H "Accept: application/vnd.github.v3+json" \
+    "https://api.github.com/repos/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/latest")
+  
+  # Store the curl exit code
+  local curl_exit_code=$?
+  
+  # Check if curl command succeeded
+  if [ $curl_exit_code -ne 0 ]; then
+    echo "Error: Failed to fetch latest version information (Exit code: $curl_exit_code)" >&2
+    return 1
+  fi
+  
+  # Check if response is empty
+  if [ -z "$api_response" ]; then
+    echo "Error: Empty response from GitHub API" >&2
+    return 1
+  fi
+  
+  # Check if response is valid JSON
+  if ! echo "$api_response" | jq empty >/dev/null 2>&1; then
+    echo "Error: Invalid JSON response from GitHub API" >&2
+    echo "Raw response: $api_response" >&2
+    return 1
+  fi
+  
+  # Try to extract the version
+  local latest_version=$(echo "$api_response" | jq -r '.tag_name')
+  
+  # Check if version was extracted successfully
+  if [ -z "$latest_version" ] || [ "$latest_version" = "null" ]; then
+    echo "Error: Could not find version tag in response" >&2
+    echo "Raw response: $api_response" >&2
+    return 1
+  fi
+  
+  
+  if [ "$current_version" != "$latest_version" ]; then
+    cat >&2 <<-EOF
 📦 Update available!
 Current version: $current_version
 Latest version:  $latest_version
 
 To upgrade, run:
     brew upgrade Vaishnav-Sabari-Girish/arduino-cli-interactive
-
 EOF
-            return 2  # Return code 2 indicates update available
-    fi
-
-    return 0  # Return code 0 indicates up to date
+    return 2  # Return code 2 indicates update available
+  fi
+  
+  return 0  # Return code 0 indicates up to date
 }
 
 list_libraries(){
