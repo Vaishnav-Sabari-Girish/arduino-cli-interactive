@@ -78,6 +78,21 @@ nix-env -iA nixpkgs.gum
 flox install gum 
 ```
 <br><br>
+
+### `timer`
+This is an interactive alternative to the default `sleep` command. It provides aesthetic progress bars. 
+
+You can install it using 
+1. Homebrew
+
+```bash
+ brew install caarlos0/tap/timer
+```
+
+For other ways to install `timer` checkout it's [Github Repo](https://github.com/caarlos0/timer)
+
+<br><br>
+
 You can also install a few alternative text editors if you do not want to use the default `nano` editor 
 of linux. 
 
