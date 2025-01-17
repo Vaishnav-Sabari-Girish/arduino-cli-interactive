@@ -29,8 +29,7 @@ Then source your file and then install `aci`
 #### Via Homebrew 
 
 ```bash
-brew tap vaishnav-sabari-girish/arduino-cli-interactive
-brew install aci
+brew install vaishnav-sabari-girish/arduino-cli-interactive/aci
 ```
 
 #### From source 
@@ -122,6 +121,18 @@ scoop install charm-gum
 ```
 
 For more installation methods , refer the [GitHub repository of `gum`](https://github.com/charmbracelet/gum)
+
+#### 3. `timer`
+
+`timer` is an interactive alternative to the default `sleep` command in linux. It offers an interactive progress bar. 
+
+You can install it using brew as follows 
+
+```bash
+brew install caarlos0/tap/timer
+```
+
+For other ways to install `timer` checkout it's [Github Repo](https://github.com/caarlos0/timer)
 
 ## Usage
 

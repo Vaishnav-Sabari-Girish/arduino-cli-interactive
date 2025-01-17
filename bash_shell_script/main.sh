@@ -16,7 +16,7 @@ serial_monitor() {
 
   echo "Press Ctrl+C again"
   while true; do
-    sleep 1
+    timer 1s
   done
 }
 
@@ -122,7 +122,7 @@ edit_config_file() {
   echo "Choose your preferred editor."
   echo "Note that these editors are already installed in your system"
 
-  sleep 1
+  timer 1s
 
   for editor in "${editors[@]}"; do
     if command -v $editor &> /dev/null; then
@@ -131,7 +131,7 @@ edit_config_file() {
   done
   
   chosen_editor=$(printf "%s\n" "${installed_editors[@]}" | gum choose)
-  sleep 0.5
+  timer 0.5s
 
   $chosen_editor $HOME/.arduino15/arduino-cli.yaml
 
@@ -145,11 +145,11 @@ edit_sketch() {
 
   echo "Choose file to edit : "
   sketch_file=$(gum file --height 6)
-  sleep 0.5
+  timer 0.5s
   echo "Choose your preferred editor."
   echo "Note that these editors are already installed in your system"
 
-  sleep 1
+  timer 1s
 
   for editor in "${editors[@]}"; do
     if command -v $editor &> /dev/null; then
@@ -158,7 +158,7 @@ edit_sketch() {
   done
   
   chosen_editor=$(printf "%s\n" "${installed_editors[@]}" | gum choose)
-  sleep 0.5
+  timer 0.5
 
   $chosen_editor $sketch_file
   
@@ -171,7 +171,7 @@ create_new_sketch() {
   echo "New Sketch Created"
   echo "At path ${PWD}" | gum style --foreground 47
 
-  sleep 2
+  timer 2s
   clear
   main
 }
@@ -197,7 +197,7 @@ upload_code() {
   echo "Uploaded Sketch" $sketch_file
   gum style --foreground 47 $sketch_file
   
-  sleep 4
+  timer 2.5s
   clear
   main
 }
@@ -253,6 +253,7 @@ install_libraries() {
 
   local lib_to_install=$(echo "$lib_chosen" | awk -F' : ' '{print $1}' | tr -d '"')
   arduino-cli lib install $lib_to_install
+  timer 2s
   main 
 }
 
