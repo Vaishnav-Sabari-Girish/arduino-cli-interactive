@@ -41,7 +41,7 @@ chmod +x main.sh
 ./main.sh 
 ```
 
-The open your `~/.bashrc` or `~/.zshrc` file and add this alias 
+Then open your `~/.bashrc` or `~/.zshrc` file and add this alias 
 ```bash
 alias aci="<path to the cloned repository>"
 ```
