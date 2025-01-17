@@ -77,7 +77,7 @@ Current version: $current_version
 Latest version:  $latest_version
 
 To upgrade, run:
-    brew upgrade Vaishnav-Sabari-Girish/arduino-cli-interactive
+    brew upgrade vaishnav-sabari-girish/arduino-cli-interactive
 EOF
     return 2  # Return code 2 indicates update available
   fi
