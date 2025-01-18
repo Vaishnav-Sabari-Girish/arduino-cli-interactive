@@ -268,8 +268,8 @@ main() {
         Sketch file :  $sketch_file
         Serial Port : $SERIAL_PORT"
 
-  sleep 1
-  local choice=$(gum choose "Select Board" "Create New Sketch" "Edit the Sketch"\
+  timer 1s
+  local choice=$(gum choose --height 12 "Select Board" "Create New Sketch" "Edit the Sketch"\
     "Compile Code" "Upload Code" "Serial Monitor" "Install Libraries" "Display Installed Libraries"\
     "View Examples" "Edit Configurations" "Exit")
 
