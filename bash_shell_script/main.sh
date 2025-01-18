@@ -16,7 +16,7 @@ serial_monitor() {
 
   echo "Press Ctrl+C again"
   while true; do
-    timer 1s
+    sleep 1
   done
 }
 
@@ -227,7 +227,7 @@ list_installed_boards() {
 
   confirm_board_selection
   
-  sleep 2
+  timer 2s
   clear
   main
 }
