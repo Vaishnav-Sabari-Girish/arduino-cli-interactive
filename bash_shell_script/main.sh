@@ -21,7 +21,7 @@ serial_monitor() {
 }
 
 check_for_updates() {
-  local current_version="v1.0.6"
+  local current_version="v1.0.7"
   
   # First check if GitHub token is set
   if [ -z "$ACI_GITHUB_TOKEN" ]; then
