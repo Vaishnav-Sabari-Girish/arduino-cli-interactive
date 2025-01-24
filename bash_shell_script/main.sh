@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 BOARD_NAME=""
 FQBN_SELECTED=""
