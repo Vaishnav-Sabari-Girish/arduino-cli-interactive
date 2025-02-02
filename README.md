@@ -174,7 +174,7 @@ brew untap vaishnav-sabari-girish/arduino-cli-interactive
 
 Refer the below recording to see it in action
 
-![action](src/images/recordings/final_cast.gif)
+![action](src/images/recordings/full_rec.gif)
 
 
 The below image gives me the basic repository details in the command line. 
