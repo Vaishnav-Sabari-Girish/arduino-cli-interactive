@@ -183,6 +183,10 @@ Tool used is `onefetch`
 
 ![Repo deets](my_repo_deets.png)
 
+Another tool to give repository details is `tokei`
+
+![Repo deets 2](tokei_output.png)
+
 Documentation short URL 
 
 https://1pt.co/aci-docs
