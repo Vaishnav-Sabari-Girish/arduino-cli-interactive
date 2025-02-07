@@ -1,3 +1,30 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Arduino Interactive CLI](#arduino-interactive-cli)
+  - [Before Installation.](#before-installation)
+  - [Installation](#installation)
+      - [Via Homebrew](#via-homebrew)
+      - [From source](#from-source)
+    - [Pre-requisites](#pre-requisites)
+      - [1. `arduino-cli`](#1-arduino-cli)
+        - [Homebrew](#homebrew)
+        - [macOS/Linux](#macoslinux)
+        - [For windows users](#for-windows-users)
+        - [Installing `arduino-cli` using the installation script](#installing-arduino-cli-using-the-installation-script)
+        - [Using the Pre-built Binaries](#using-the-pre-built-binaries)
+      - [2. `gum`](#2-gum)
+      - [3. `timer`](#3-timer)
+  - [Usage](#usage)
+    - [To update the app](#to-update-the-app)
+      - [Using Homebrew](#using-homebrew)
+      - [By Cloning the latest repository](#by-cloning-the-latest-repository)
+    - [To Uninstall](#to-uninstall)
+    - [Features provided by `aci`](#features-provided-by-aci)
+      - [Legends](#legends)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ![Banner](banner.png)
 <br><br>
 
