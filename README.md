@@ -3,6 +3,7 @@
 
 - [Arduino Interactive CLI](#arduino-interactive-cli)
   - [Before Installation.](#before-installation)
+  - [Testing the Tool (before install)](#testing-the-tool-before-install)
   - [Installation](#installation)
       - [Via Homebrew](#via-homebrew)
       - [From source](#from-source)
@@ -54,6 +55,14 @@ export ACI_GITHUB_TOKEN="<your PAT>"
 ```
 
 Then source your file and then install `aci`
+
+## Testing the Tool (before install)
+
+If you want to know how the tool works without installing it, copy and paste the below command :
+
+```bash
+curl -sSL https://raw.githubusercontent.com/Vaishnav-Sabari-Girish/arduino-cli-interactive/refs/heads/main/bash_shell_script/main.sh | bash
+```
 
 ## Installation
 
