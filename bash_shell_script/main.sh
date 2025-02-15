@@ -21,7 +21,7 @@ serial_monitor() {
 }
 
 check_for_updates() {
-  local current_version="v1.0.8"
+  local current_version="v1.0.9"
 
   # Check if the system is online by pinging Google
   if ! ping -q -c 1 -W 1 8.8.8.8 >/dev/null 2>&1; then
@@ -136,7 +136,7 @@ edit_config_file() {
   chosen_editor=$(printf "%s\n" "${installed_editors[@]}" | gum choose)
   timer 0.5s
 
-  $chosen_editor $HOME/.arduino15/arduino-cli.yaml
+  $chosen_editor "$HOME/.arduino15/arduino-cli.yaml"
 
   gum confirm "Check file contents" && gum pager <$HOME/.arduino15/arduino-cli.yaml || main
 
@@ -162,9 +162,9 @@ edit_sketch() {
   chosen_editor=$(printf "%s\n" "${installed_editors[@]}" | gum choose)
   timer 0.5
 
-  $chosen_editor $sketch_file
+  "$chosen_editor" "$sketch_file"
 
-  gum confirm "Check file contents" && gum pager <$sketch_file || main
+  gum confirm "Check file contents" && gum pager <"$sketch_file" || main
 
 }
 

@@ -28,7 +28,7 @@
 ![Banner](banner.png)
 <br><br>
 
-[![Release Badge](https://badgen.net/badge/Release/v1.0.8/green?icon=github)](https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/tag/v1.0.8)
+[![Release Badge](https://badgen.net/badge/Release/v1.0.9/green?icon=github)](https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/tag/v1.0.9)
 
 ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)`
 
