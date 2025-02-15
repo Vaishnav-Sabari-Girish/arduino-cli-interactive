@@ -17,10 +17,10 @@ install_dependencies() {
 
     # Add Homebrew to PATH
     if [ -n "$ZSH_VERSION" ]; then
-      echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>~/.zshrc
+      echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>~/.zshrc
       eval "$(/opt/homebrew/bin/brew shellenv)"
     elif [ -n "$BASH_VERSION" ]; then
-      echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>~/.bashrc
+      echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>~/.bashrc
       eval "$(/opt/homebrew/bin/brew shellenv)"
     fi
   fi
@@ -58,7 +58,7 @@ serial_monitor() {
 }
 
 check_for_updates() {
-  local current_version="v1.0.9"
+  local current_version="v1.1.0"
 
   # Check if the system is online by pinging Google
   if ! ping -q -c 1 -W 1 8.8.8.8 >/dev/null 2>&1; then
