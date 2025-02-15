@@ -9,6 +9,43 @@ installed_editors=()
 
 sketch_file=""
 
+install_dependencies() {
+  # Check if Homebrew is installed
+  if ! command -v brew &>/dev/null; then
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    # Add Homebrew to PATH
+    if [ -n "$ZSH_VERSION" ]; then
+      echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>~/.zshrc
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+    elif [ -n "$BASH_VERSION" ]; then
+      echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>~/.bashrc
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+    fi
+  fi
+
+  # Install Gum
+  if ! command -v gum &>/dev/null; then
+    echo "Installing Gum..."
+    brew install gum
+  fi
+
+  # Install Arduino CLI
+  if ! command -v arduino-cli &>/dev/null; then
+    echo "Installing Arduino CLI..."
+    curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
+  fi
+
+  # Install Timer
+  if ! command -v timer &>/dev/null; then
+    echo "Installing Timer..."
+    brew install caarlos0/tap/timer
+  fi
+
+  clear
+}
+
 serial_monitor() {
   local baud_rate=$(gum input --placeholder "Baud Rate")
   arduino-cli monitor -p $SERIAL_PORT -b $FQBN_SELECTED --config $baud_rate
@@ -260,6 +297,7 @@ install_libraries() {
 
 main() {
   clear
+  install_dependencies
 
   check_for_updates
   local intro="Welcome to arduino-cli-interactive"
