@@ -19,9 +19,11 @@ install_dependencies() {
     if [ -n "$ZSH_VERSION" ]; then
       echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>~/.zshrc
       eval "$(/opt/homebrew/bin/brew shellenv)"
+      source ~/.zshrc
     elif [ -n "$BASH_VERSION" ]; then
       echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >>~/.bashrc
       eval "$(/opt/homebrew/bin/brew shellenv)"
+      source ~/.bashrc
     fi
   fi
 
