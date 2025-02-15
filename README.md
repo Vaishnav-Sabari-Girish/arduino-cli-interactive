@@ -94,6 +94,8 @@ source ~/.zshrc  #For zsh users
 
 ### Pre-requisites
 
+If not installed, the script will do it on it's own. But just in case something doesn't install properly do the below. 
+
 #### 1. `arduino-cli` 
 
 There are many ways to install arduino-cli. I recommend Homebrew , because all the other prerequisite tools are also available on homebrew. 
