@@ -23,6 +23,7 @@
     - [To Uninstall](#to-uninstall)
     - [Features provided by `aci`](#features-provided-by-aci)
       - [Legends](#legends)
+- [Stargazers over Time](#stargazers-over-time)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -257,3 +258,6 @@ https://1pt.co/aci-docs
 
 To acces this Repository in radicle , click [here](https://app.radicle.xyz/nodes/seed.radicle.garden/rad:z2xtEKkr65SpfQZUQWgqVKSVkfbfw)
 
+# Stargazers over Time 
+
+[![Stargazers over time](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive.svg?variant=dark)](https://starchart.cc/Vaishnav-Sabari-Girish/arduino-cli-interactive)
