@@ -7,3 +7,5 @@ target/
 book/
 main_rust/
 aci_rust/
+
+create_package.sh
