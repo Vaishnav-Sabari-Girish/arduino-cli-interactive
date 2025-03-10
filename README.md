@@ -76,7 +76,20 @@ brew install vaishnav-sabari-girish/arduino-cli-interactive/aci
 #### From source 
 
 ```bash
+
+# Cloning from GitHub 
 git clone https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
+
+# Cloning from CodeBerg.org 
+git clone https://codeberg.org/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
+
+# Cloning from Radicle 
+## Using git 
+git clone https://seed.radicle.garden/z2xtEKkr65SpfQZUQWgqVKSVkfbfw.git arduino-cli-interactive 
+## Using Radicle CLI 
+rad clone rad:z2xtEKkr65SpfQZUQWgqVKSVkfbfw 
+
+
 cd bash_shell_script
 chmod +x main.sh 
 ./main.sh 
@@ -89,8 +102,8 @@ alias aci="<path to the cloned repository>"
 
 Then in the terminal type 
 ```bash
-source ~/.bashrc #For bash users 
-source ~/.zshrc  #For zsh users
+source ~/.bashrc # For bash users 
+source ~/.zshrc  # For zsh users
 ```
 
 ### Pre-requisites
@@ -255,6 +268,8 @@ https://1pt.co/aci-docs
 #### Legends
 - [x] Features present 
 - [ ] Features to be added
+
+To access this repository in Codeberg.org, click [here](https://codeberg.org/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
 
 To acces this Repository in radicle , click [here](https://app.radicle.xyz/nodes/seed.radicle.garden/rad:z2xtEKkr65SpfQZUQWgqVKSVkfbfw)
 
