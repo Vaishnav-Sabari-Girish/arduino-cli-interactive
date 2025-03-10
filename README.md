@@ -239,9 +239,6 @@ Another tool to give repository details is `tokei`
 
 ![Repo deets 2](tokei_output.png)
 
-Documentation short URL 
-
-https://1pt.co/aci-docs
 
 
 ### Features provided by `aci`
@@ -262,6 +259,7 @@ https://1pt.co/aci-docs
 - [x] Serial Monitor. (Expected in V1.0.3 or V1.0.4). 
 - [ ] TL;DR to make it easier to use `aci` (Expected in future releases)
 - [ ] Create a release fo Nushell and Fish (Expected in the future)
+- [x] No need to install the dependacies seperately. `aci` does it for you. 
 
 ---
 
