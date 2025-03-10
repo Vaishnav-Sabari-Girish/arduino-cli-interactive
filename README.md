@@ -35,6 +35,9 @@
 ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)`
 
 
+My tool is also available on TerminalTrove.com if you’d like to check it out there.
+
+[![TerminalTrove](https://img.shields.io/badge/Available%20on-TerminalTrove-blue?style=flat-square)](https://terminaltrove.com/arduino-cli-interactive/)
 
 
 # Arduino Interactive CLI
@@ -211,7 +214,18 @@ brew update && brew upgrade aci
 Delete the folder named `arduino-cli-interactive` from the computer and then 
 
 ```bash 
+# From GitHub 
 git clone https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
+
+# From CodeBerg.org 
+git clone https://codeberg.org/Vaishnav-Sabari-Girish/arduino-cli-interactive.git 
+
+# From Radicle 
+## Using git 
+git clone https://seed.radicle.garden/z2xtEKkr65SpfQZUQWgqVKSVkfbfw.git arduino-cli-interactive 
+## Using Radicle CLI 
+rad clone rad:z2xtEKkr65SpfQZUQWgqVKSVkfbfw 
+
 cd bash_shell_script
 chmod +x main.sh 
 ./main.sh 
