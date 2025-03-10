@@ -37,8 +37,7 @@
 
 My tool is also available on TerminalTrove.com if you’d like to check it out there.
 
-[![TerminalTrove](https://img.shields.io/badge/Available%20on-TerminalTrove-blue?style=flat-square)](https://terminaltrove.com/arduino-cli-interactive/)
-
+[![TerminalTrove](https://img.shields.io/badge/Available%20on-TerminalTrove-brightgreen?style=for-the-badge)](https://terminaltrove.com/arduino-cli-interactive/)
 
 # Arduino Interactive CLI
 
