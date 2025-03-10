@@ -29,3 +29,32 @@ If you are interested to provide any kind of feedback on this project, here's ho
     alt="Signal"
   />
 </a>
+
+<br><br>
+**Bluesky** : <br><br> 
+
+<a href="https://bsky.app/profile/vaishnav-dev.bsky.social">
+  <img 
+    src="https://img.shields.io/badge/Bluesky-0285FF.svg?style=for-the-badge&logo=Bluesky&logoColor=white"
+    alt="bluesky"
+    />
+</a>
+
+<br><br>
+**Dev.to** : <br><br>
+
+<a href="https://dev.to/vaishnav_sabari_girish">
+  <img 
+    src="https://img.shields.io/badge/dev.to-0A0A0A.svg?style=for-the-badge&logo=devdotto&logoColor=white"
+    alt="dev.to"
+    />
+</a>
+
+<br><br> 
+**Linkedin** : <br><br>
+<a href="https://www.linkedin.com/in/vaishnav-sabari-girish/">
+  <img 
+    src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"
+    alt="Linkedin"
+  />
+</a>
