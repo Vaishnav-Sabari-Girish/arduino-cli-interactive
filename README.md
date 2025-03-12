@@ -1,6 +1,7 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [Documentation Links](#documentation-links)
 - [Arduino Interactive CLI](#arduino-interactive-cli)
   - [Before Installation.](#before-installation)
   - [Testing the Tool (before install)](#testing-the-tool-before-install)
@@ -34,6 +35,11 @@
 
 ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)`
 
+
+# Documentation Links 
+
+1. [Github Pages](https://vaishnav-sabari-girish.github.io/arduino-cli-interactive/)
+2. [Codeberg Pages](https://vaishnav-sabari-girish.codeberg.page/pages/intro.html)
 
 My tool is also available on TerminalTrove.com if you’d like to check it out there.
 
