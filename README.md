@@ -280,10 +280,15 @@ Another tool to give repository details is `tokei`
 - [x] Features present 
 - [ ] Features to be added
 
+To access this repository in Github , click [here](https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
+
+
 To access this repository in Codeberg.org, click [here](https://codeberg.org/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
 
-To acces this Repository in radicle , click [here](https://app.radicle.xyz/nodes/seed.radicle.garden/rad:z2xtEKkr65SpfQZUQWgqVKSVkfbfw)
-To acces this repository in Gitea, click [here](https://gitea.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
+To access this Repository in radicle , click [here](https://app.radicle.xyz/nodes/seed.radicle.garden/rad:z2xtEKkr65SpfQZUQWgqVKSVkfbfw)
+
+To access this repository in Gitea, click [here](https://gitea.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
+
 
 # Stargazers over Time 
 
