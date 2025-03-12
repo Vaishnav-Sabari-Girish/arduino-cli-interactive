@@ -282,7 +282,6 @@ Another tool to give repository details is `tokei`
 
 To access this repository in Github , click [here](https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
 
-
 To access this repository in Codeberg.org, click [here](https://codeberg.org/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
 
 To access this Repository in radicle , click [here](https://app.radicle.xyz/nodes/seed.radicle.garden/rad:z2xtEKkr65SpfQZUQWgqVKSVkfbfw)
