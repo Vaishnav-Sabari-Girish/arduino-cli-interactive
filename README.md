@@ -57,7 +57,7 @@ This tool is made specifically for those who want to transition from the Arduino
 Before installing the tool, make sure you create a GitHub PAT (Personal Access Token), so that you can be notified when
 the tool gets a new version. 
 
-You can create a PAT token [here](https://github.com/settings/tokens). Make sure you choose Tokns (Classic), and give repo
+You can create a PAT token [here](https://github.com/settings/tokens). Make sure you choose Tokens (Classic), and give repo
 permissions for your token. 
 
 Once you have your PAT, copy it and save it as an Environment variables in your ~/.bashrc or ~/.zshrc file as follows :
