@@ -31,7 +31,7 @@
 ![Banner](banner.png)
 <br><br>
 
-[![Release Badge](https://badgen.net/badge/Release/v1.1.0/green?icon=github)](https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/tag/v1.1.0)
+[![Release](https://img.shields.io/badge/Release-V1.1.0-blue?style=for-the-badge&labelColor=gray)](https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive/releases/tag/v1.1.0)
 
 ![License](license-apache-2.0.svg)
 
