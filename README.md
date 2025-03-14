@@ -290,13 +290,13 @@ Another tool to give repository details is `tokei`
 - [x] Features present 
 - [ ] Features to be added
 
-To access this repository in Github , click [here](https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
+To access this repository in Github , click &nbsp; &nbsp; [![Github](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
 
-To access this repository in Codeberg.org, click [here](https://codeberg.org/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
+To access this repository in Codeberg.org, click &nbsp; &nbsp; [![CodeBerg](https://img.shields.io/badge/Codeberg-2185D0.svg?style=for-the-badge&logo=Codeberg&logoColor=white)](https://codeberg.org/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
 
-To access this Repository in radicle , click [here](https://app.radicle.xyz/nodes/seed.radicle.garden/rad:z2xtEKkr65SpfQZUQWgqVKSVkfbfw)
+To access this Repository in radicle , click [![Radicle](https://img.shields.io/badge/Radicle-7677CA.svg?style=for-the-badge&logo=Radicle&logoColor=white) ](https://app.radicle.xyz/nodes/seed.radicle.garden/rad:z2xtEKkr65SpfQZUQWgqVKSVkfbfw)
 
-To access this repository in Gitea, click [here](https://gitea.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
+To access this repository in Gitea, click [![Gitea](https://img.shields.io/badge/Gitea-609926.svg?style=for-the-badge&logo=Gitea&logoColor=white)](https://gitea.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
 
 
 # Stargazers over Time 
