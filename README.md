@@ -6,6 +6,8 @@
   - [Before Installation.](#before-installation)
   - [Testing the Tool (before install)](#testing-the-tool-before-install)
   - [Installation](#installation)
+      - [Using Basher](#using-basher)
+        - [NOTE:](#note)
       - [Via Homebrew](#via-homebrew)
       - [From source](#from-source)
     - [Pre-requisites](#pre-requisites)
@@ -78,6 +80,21 @@ curl -sSL https://raw.githubusercontent.com/Vaishnav-Sabari-Girish/arduino-cli-i
 ```
 
 ## Installation
+
+#### Using Basher 
+
+This tool can also be installed using the package manager for bash scripts `basher` as follows 
+
+```bash 
+basher install Vaishnav-Sabari-Girish/arduino-cli-interactive 
+```
+
+To run it, in the terminal run `aci.sh`
+
+##### NOTE:  
+If you have installed it using basher, make sure you have installed `gum`, `timer`, `arduino-cli`, `homebrew` and also added `homebrew` to PATH
+```
+```
 
 #### Via Homebrew 
 
