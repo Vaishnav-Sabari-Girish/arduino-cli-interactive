@@ -97,7 +97,8 @@ If you have installed it using basher, make sure you have installed `gum`, `time
 
 To upgrade the tool type 
 ```bash
-basher upgrade Vaishnav-Sabari-Girish/arduino-cli-interactive
+basher uninstall Vaishnav-Sabari-Girish/arduino-cli-interactive
+basher install Vaishnav-Sabari-Girish/arduino-cli-interactive
 ``` 
 ```
 
