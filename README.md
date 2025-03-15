@@ -93,14 +93,12 @@ To run it, in the terminal run `aci.sh`
 
 ##### NOTE:  
 If you have installed it using basher, make sure you have installed `gum`, `timer`, `arduino-cli`, `homebrew` and also added `homebrew` to PATH
-```
-```
+
 
 To upgrade the tool type 
 ```bash
 basher upgrade Vaishnav-Sabari-Girish/arduino-cli-interactive
 ``` 
-```
 ```
 
 #### Via Homebrew 
