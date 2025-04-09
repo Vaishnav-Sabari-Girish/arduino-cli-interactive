@@ -52,7 +52,9 @@
 My tool is also available on TerminalTrove.com if you’d like to check it out there.
 
 [![TerminalTrove](https://img.shields.io/badge/Available%20on-TerminalTrove-brightgreen?style=for-the-badge)](https://terminaltrove.com/arduino-cli-interactive/)
+My tool is also available on [awesome-tuis](https://github.com/rothgar/awesome-tuis) repository. 
 
+[awesome-tuis](https://github.com/rothgar/awesome-tuis?tab=readme-ov-file#miscellaneous)
 # Arduino Interactive CLI
 
 This tool is made specifically for those who want to transition from the Arduino IDE to the CLI , but are still scared or intimidated by the command line. 
