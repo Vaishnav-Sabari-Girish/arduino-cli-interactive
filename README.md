@@ -52,6 +52,7 @@
 My tool is also available on TerminalTrove.com if you’d like to check it out there.
 
 [![TerminalTrove](https://img.shields.io/badge/Available%20on-TerminalTrove-brightgreen?style=for-the-badge)](https://terminaltrove.com/arduino-cli-interactive/)
+
 My tool is also available on [awesome-tuis](https://github.com/rothgar/awesome-tuis) repository. 
 
 [awesome-tuis](https://github.com/rothgar/awesome-tuis?tab=readme-ov-file#miscellaneous)
@@ -123,12 +124,6 @@ git clone https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
 
 # Cloning from CodeBerg.org 
 git clone https://codeberg.org/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
-
-# Cloning from Radicle 
-## Using git 
-git clone https://seed.radicle.garden/z2xtEKkr65SpfQZUQWgqVKSVkfbfw.git arduino-cli-interactive 
-## Using Radicle CLI 
-rad clone rad:z2xtEKkr65SpfQZUQWgqVKSVkfbfw 
 
 
 cd bash_shell_script
@@ -258,11 +253,6 @@ git clone https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
 # From CodeBerg.org 
 git clone https://codeberg.org/Vaishnav-Sabari-Girish/arduino-cli-interactive.git 
 
-# From Radicle 
-## Using git 
-git clone https://seed.radicle.garden/z2xtEKkr65SpfQZUQWgqVKSVkfbfw.git arduino-cli-interactive 
-## Using Radicle CLI 
-rad clone rad:z2xtEKkr65SpfQZUQWgqVKSVkfbfw 
 
 cd bash_shell_script
 chmod +x main.sh 
@@ -310,8 +300,8 @@ Another tool to give repository details is `tokei`
 - [ ] Basic Examples of beginner codes like Blink , print to serial monitor etc. (Expected in future releases). 
 - [x] Serial Monitor. (Expected in V1.0.3 or V1.0.4). 
 - [ ] TL;DR to make it easier to use `aci` (Expected in future releases)
-- [ ] Create a release fo Nushell and Fish (Expected in the future)
-- [x] No need to install the dependacies seperately. `aci` does it for you. 
+- [ ] Create a release for Nushell and Fish (Expected in the future)
+- [x] No need to install the dependencies separately. `aci` does it for you. 
 
 ---
 
@@ -322,8 +312,6 @@ Another tool to give repository details is `tokei`
 To access this repository in Github , click &nbsp; &nbsp; [![Github](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
 
 To access this repository in Codeberg.org, click &nbsp; &nbsp; [![CodeBerg](https://img.shields.io/badge/Codeberg-2185D0.svg?style=for-the-badge&logo=Codeberg&logoColor=white)](https://codeberg.org/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
-
-To access this Repository in radicle , click  &nbsp; &nbsp;[![Radicle](https://img.shields.io/badge/Radicle-7677CA.svg?style=for-the-badge&logo=Radicle&logoColor=white) ](https://app.radicle.xyz/nodes/seed.radicle.garden/rad:z2xtEKkr65SpfQZUQWgqVKSVkfbfw)
 
 To access this repository in Gitea, click &nbsp; &nbsp; [![Gitea](https://img.shields.io/badge/Gitea-609926.svg?style=for-the-badge&logo=Gitea&logoColor=white)](https://gitea.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
 
