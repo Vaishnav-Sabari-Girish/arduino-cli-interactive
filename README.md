@@ -295,7 +295,7 @@ Another tool to give repository details is `tokei`
   - [x] New Bootloader 
 - [x] Install 3rd Party Cores (For ESP8266 and ESP32)
 - [x] Install Libraries 
-- [x] View Install Libraries 
+- [x] View Installed Libraries 
 - [x] Search , compile and upload the examples of the installed libraries 
 - [ ] Basic Examples of beginner codes like Blink , print to serial monitor etc. (Expected in future releases). 
 - [x] Serial Monitor. (Expected in V1.0.3 or V1.0.4). 
