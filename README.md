@@ -107,7 +107,6 @@ To upgrade the tool type
 basher uninstall Vaishnav-Sabari-Girish/arduino-cli-interactive
 basher install Vaishnav-Sabari-Girish/arduino-cli-interactive
 ``` 
-```
 
 #### Via Homebrew 
 
@@ -124,6 +123,9 @@ git clone https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
 
 # Cloning from CodeBerg.org 
 git clone https://codeberg.org/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
+
+# Cloning from GiTea 
+git clone https://gitea.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git
 
 
 cd bash_shell_script
