@@ -60,7 +60,7 @@ serial_monitor() {
 }
 
 check_for_updates() {
-  local current_version="v1.1.0"
+  local current_version="v1.2.0"
 
   # Check if the system is online by pinging Google
   if ! ping -q -c 1 -W 1 8.8.8.8 >/dev/null 2>&1; then
