@@ -299,7 +299,7 @@ Another tool to give repository details is `tokei`
 - [x] Install Libraries 
 - [x] View Installed Libraries 
 - [x] Search , compile and upload the examples of the installed libraries 
-- [ ] Basic Examples of beginner codes like Blink , print to serial monitor etc. (Expected in future releases). 
+- [x] Basic Examples of beginner codes like Blink , print to serial monitor etc. (Expected in future releases). 
 - [x] Serial Monitor. (Expected in V1.0.3 or V1.0.4). 
 - [ ] TL;DR to make it easier to use `aci` (Expected in future releases)
 - [ ] Create a release for Nushell and Fish (Expected in the future)

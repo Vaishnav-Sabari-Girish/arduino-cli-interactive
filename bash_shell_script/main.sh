@@ -135,6 +135,18 @@ list_libraries() {
   gum confirm "Return to homepage ?" && main || :
 }
 
+basic_examples() {
+  installed_editors=()
+
+  local examples_dir="examples/"
+  local basic_example_chosen=$(gum file $examples_dir)
+
+  gum pager <$basic_example_chosen
+  sketch_file=$basic_example_chosen
+
+  main
+}
+
 lib_examples() {
   installed_editors=()
 
@@ -312,7 +324,7 @@ main() {
   timer 1s
   local choice=$(gum choose --height 12 "Select Board" "Create New Sketch" "Edit the Sketch" \
     "Compile Code" "Upload Code" "Serial Monitor" "Install Libraries" "Display Installed Libraries" \
-    "View Examples" "Edit Configurations" "Exit")
+    "View Basic Examples" "View Library Examples" "Edit Configurations" "Exit")
 
   case $choice in
   "Create New Sketch")
@@ -341,7 +353,10 @@ main() {
   "Display Installed Libraries")
     list_libraries
     ;;
-  "View Examples")
+  "View Basic Examples")
+    basic_examples
+    ;;
+  "View Library Examples")
     lib_examples
     ;;
   "Select Board")
