@@ -58,3 +58,13 @@ If you are interested to provide any kind of feedback on this project, here's ho
     alt="Linkedin"
   />
 </a>
+
+<br><br> 
+**LINE** : <br><br>
+<a href="https://line.me/ti/p/QAB--UjKJ4">
+  <img 
+    src="https://img.shields.io/badge/LINE-00C300.svg?style=for-the-badge&logo=LINE&logoColor=white"
+    alt="LINE"
+  />
+</a>
+
