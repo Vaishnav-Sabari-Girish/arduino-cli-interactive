@@ -139,7 +139,7 @@ list_libraries() {
 basic_examples() {
   installed_editors=()
 
-  local examples_dir="./examples/"
+  local examples_dir="$(brew --prefix aci)/libexec/examples"
   local basic_example_chosen=$(gum file $examples_dir)
 
   gum pager <$basic_example_chosen
