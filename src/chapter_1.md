@@ -32,7 +32,7 @@ brew install aci
 
 ## Pre-requisites 
 
-For the `aci` tool to work as intended , there are 2 prerequisite tools required. 
+For the `aci` tool to work as intended , there are 3 prerequisite tools required. 
 
 ### `arduino-cli`
 

@@ -4,8 +4,22 @@
 
 By the end of this chapter , you will be able to do the following : 
 
-1. [Display the installed libraries](#display-installed-libraries)
-2. [View the library examples](#view-library-examples). 
+1. [View the basic Examples](#view-basic-examples)
+2. [Display the installed libraries](#display-installed-libraries)
+3. [View the library examples](#view-library-examples). 
+
+<br><br>
+
+## View Basic Examples
+
+These are the default examples that come with the Arduino IDE. These examples include code for Blinking LED, 
+Basic Serial Communication, GPIO operations and more. 
+
+To read these examples, we traverse to the `View Basic Examples` option using the arrow keys and click `Enter`. This provides us with this page. 
+
+Here is the video 
+
+![Basic Examples](./images/recordings/basic_examples.gif)
 
 <br><br>
 ## Display Installed Libraries 
