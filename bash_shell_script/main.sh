@@ -28,6 +28,7 @@ install_dependencies() {
   fi
 
   # Install Gum
+  #
   if ! command -v gum &>/dev/null; then
     echo "Installing Gum..."
     brew install gum
