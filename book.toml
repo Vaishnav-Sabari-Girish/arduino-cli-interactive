@@ -8,3 +8,6 @@ repository = "https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive"
 
 [src]
 images = ["images"]
+
+[output.html]
+git-repository-url = "https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive"
