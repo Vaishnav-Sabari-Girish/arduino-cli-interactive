@@ -26,6 +26,9 @@
     - [To Uninstall](#to-uninstall)
     - [Features provided by `aci`](#features-provided-by-aci)
       - [Legends](#legends)
+- [OSCG Guidelines](#oscg-guidelines)
+  - [Contributor Guidelines](#contributor-guidelines)
+  - [Mentor Guidelines](#mentor-guidelines)
 - [Stargazers over Time](#stargazers-over-time)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -318,6 +321,16 @@ To access this repository in Github , click &nbsp; &nbsp; [![Github](https://img
 To access this repository in Codeberg.org, click &nbsp; &nbsp; [![CodeBerg](https://img.shields.io/badge/Codeberg-2185D0.svg?style=for-the-badge&logo=Codeberg&logoColor=white)](https://codeberg.org/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
 
 To access this repository in Gitea, click &nbsp; &nbsp; [![Gitea](https://img.shields.io/badge/Gitea-609926.svg?style=for-the-badge&logo=Gitea&logoColor=white)](https://gitea.com/Vaishnav-Sabari-Girish/arduino-cli-interactive.git)
+
+# OSCG Guidelines 
+
+## Contributor Guidelines 
+
+[Contributor Guidelines](./OSCG_CONTRIBUTOR_Guidelines.md)
+
+## Mentor Guidelines
+
+[Mentor Guidelines](./OSCG_MENTOR_Guidelines.md)
 
 
 # Stargazers over Time 
