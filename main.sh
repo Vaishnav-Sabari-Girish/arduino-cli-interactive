@@ -373,4 +373,8 @@ main() {
   esac
 }
 
-main
+if [[ "${BASH_SOURCE[0]}" == "${0}" && -z "$ACI_TEST_MODE" ]]; then
+  main
+fi
+
+
