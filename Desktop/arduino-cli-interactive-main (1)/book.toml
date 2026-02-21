@@ -1,0 +1,13 @@
+[book]
+authors = ["vaishnav_sabari_girish"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Arduino CLI Interactive (aci)"
+repository = "https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive"
+
+[src]
+images = ["images"]
+
+[output.html]
+git-repository-url = "https://github.com/Vaishnav-Sabari-Girish/arduino-cli-interactive"
