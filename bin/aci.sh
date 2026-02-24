@@ -12,8 +12,8 @@ sketch_file=""
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 serial_monitor() {
-  local baud_rate=$(gum input --placeholder "Baud Rate")
-  arduino-cli monitor -p $SERIAL_PORT -b $FQBN_SELECTED --config $baud_rate
+  local baud_rate=$(gum choose "300" "1200" "2400" "4800" "9600" "19200" "38400" "57600" "115200" --header "Select Baud Rate")
+  arduino-cli monitor -p $SERIAL_PORT -b $FQBN_SELECTED --config baudrate=$baud_rate
   trap 'gum confirm "Return to Homepage ?" && main || exit' SIGINT
 
   echo "Press Ctrl+C again"
