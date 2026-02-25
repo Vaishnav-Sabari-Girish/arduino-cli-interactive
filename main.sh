@@ -9,6 +9,14 @@ installed_editors=()
 
 sketch_file=""
 
+run_timer() {
+  if command -v timer &>/dev/null; then
+    timer "$1"
+  else
+    sleep "${1%s}"
+  fi
+}
+
 install_dependencies() {
   # Check if Homebrew is installed
   if ! command -v brew &>/dev/null; then
@@ -177,7 +185,7 @@ edit_config_file() {
   echo "Choose your preferred editor."
   echo "Note that these editors are already installed in your system"
 
-  timer 1s
+  run_timer 1s
 
   for editor in "${editors[@]}"; do
     if command -v $editor &>/dev/null; then
@@ -186,7 +194,7 @@ edit_config_file() {
   done
 
   chosen_editor=$(printf "%s\n" "${installed_editors[@]}" | gum choose)
-  timer 0.5s
+  run_timer 0.5s
 
   $chosen_editor "$HOME/.arduino15/arduino-cli.yaml"
 
@@ -199,11 +207,11 @@ edit_sketch() {
 
   echo "Choose file to edit : "
   sketch_file=$(gum file --height 6)
-  timer 0.5s
+  run_timer 0.5s
   echo "Choose your preferred editor."
   echo "Note that these editors are already installed in your system"
 
-  timer 1s
+  run_timer 1s
 
   for editor in "${editors[@]}"; do
     if command -v $editor &>/dev/null; then
@@ -212,7 +220,7 @@ edit_sketch() {
   done
 
   chosen_editor=$(printf "%s\n" "${installed_editors[@]}" | gum choose)
-  timer 0.5
+  run_timer 0.5
 
   "$chosen_editor" "$sketch_file"
 
@@ -225,7 +233,7 @@ create_new_sketch() {
   echo "New Sketch Created"
   echo "At path ${PWD}" | gum style --foreground 47
 
-  timer 2s
+  run_timer 2s
   clear
   main
 }
@@ -251,7 +259,7 @@ upload_code() {
   echo "Uploaded Sketch" $sketch_file
   gum style --foreground 47 $sketch_file
 
-  timer 2.5s
+  run_timer 2.5s
   clear
   main
 }
@@ -280,7 +288,7 @@ list_installed_boards() {
 
   confirm_board_selection
 
-  timer 2s
+  run_timer 2s
   clear
   main
 }
@@ -306,7 +314,7 @@ install_libraries() {
 
   local lib_to_install=$(echo "$lib_chosen" | awk -F' : ' '{print $1}' | tr -d '"')
   arduino-cli lib install $lib_to_install
-  timer 2s
+  run_timer 2s
   main
 }
 
@@ -322,7 +330,7 @@ main() {
         Sketch file :  $sketch_file
         Serial Port : $SERIAL_PORT"
 
-  timer 1s
+  run_timer 1s
   local choice=$(gum choose --height 12 "Select Board" "Create New Sketch" "Edit the Sketch" \
     "Compile Code" "Upload Code" "Serial Monitor" "Install Libraries" "Display Installed Libraries" \
     "View Basic Examples" "View Library Examples" "Edit Configurations" "Exit")
