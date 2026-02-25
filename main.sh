@@ -1,4 +1,24 @@
 #!/usr/bin/env bash
+# Dependency Check Function
+# ------------------------------
+
+check_dependencies() {
+  local missing=0
+
+  for cmd in arduino-cli gum timer; do
+    if ! command -v "$cmd" >/dev/null 2>&1; then
+      echo "❌ Error: '$cmd' is not installed or not found in PATH."
+      missing=1
+    fi
+  done
+
+  if [ $missing -eq 1 ]; then
+    echo ""
+    echo "Please install the missing dependencies and try again."
+    echo "Exiting..."
+    exit 1
+  fi
+}
 
 BOARD_NAME=""
 FQBN_SELECTED=""
@@ -313,6 +333,7 @@ install_libraries() {
 main() {
   clear
   install_dependencies
+  check_dependencies
 
   check_for_updates
   local intro="Welcome to arduino-cli-interactive"
