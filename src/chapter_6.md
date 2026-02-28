@@ -36,8 +36,8 @@ void loop() {
 Once these are done, in the homepage , navigate to the **Serial Monitor** Option using the arrow keys and
 press **Enter**. 
 
-Now an Input dialog box appears that prompts you to enter the Baud Rate you used in your program (9600, 
-15200 etc.). Enter the correct baud rate you used and press **Enter**. 
+Now a selection menu appears that prompts you to select the Baud Rate you used in your program (9600, 
+115200 etc.). Select the correct baud rate you used and press **Enter**. 
 
 The Serial Monitor is now open for business. To exit the serial monitor, press *CTRL + C* 2 times. 
 The second time, you will be prompted for confimation to return to the homepage. Choose what you want
