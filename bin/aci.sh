@@ -20,7 +20,7 @@ run_timer() {
 }
 
 serial_monitor() {
-  local baud_rate=$(gum choose "300" "1200" "2400" "4800" "9600" "19200" "38400" "57600" "115200" "230400" "250000" "500000" "1000000" "2000000" --header "Select Baud Rate")
+  local baud_rate=$(gum choose "300" "600" "1200" "2400" "4800" "9600" "14400" "19200" "28800" "38400" "57600" "115200" "230400" "250000" "500000" "1000000" "2000000" --header "Select Baud Rate")
   if [ -z "$baud_rate" ]; then
     main
   fi
